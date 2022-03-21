@@ -1,0 +1,3 @@
+[submodule "workshop-generative-art"]
+	path = workshop-generative-art
+	url = git@github.com:mattdesl/workshop-generative-art.git

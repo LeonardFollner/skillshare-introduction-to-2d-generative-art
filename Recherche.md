@@ -1,0 +1,104 @@
+# Generative Art
+
+## [Tim Holman – Generative Art Speedrun](https://youtu.be/4Se0_w0ISYk)
+- Toolbelt
+    - Lines »/ vs \\«
+        - Randomised Direction
+    - Tiling
+        - /\
+        - —|
+    - Displacement
+    - Curves
+        - Tiling again
+        - Joy Division
+    - Repetition
+        - Line → Displacement → Repetition
+        - Andreas Hoff
+    - Shapes
+        - Squares/Triangles/Circles + Tiling
+        - Square Grid Rotation
+            - Displacement
+        - Circle Displacement
+    - Recursion
+        - Square getting smaller
+            - Tiling
+        - Serpinski Triangle
+        - Branching
+            - Tiling
+    - Colors
+        - random colors --> difficult
+            - work around rotate around hue
+            - best: go on palette website
+        - add to shapes
+        - pipes
+        - circle displacement repetition
+        - recursion of circles in circles
+            - add color
+    - algorithms
+        - Perlin Noise
+            - particle flow field
+                - speed
+                - color
+    - Other Inputs
+        - Images
+            - e.g. Mona Lisa
+        - Audio Input
+- further exploration:
+    - 3D
+    - Music
+- Tools
+    - CodePen
+    - JSBin
+    - JSFiddle
+    - Glitch
+    - tutorial-Markdown
+
+## Matt’s [Workshop on Generative Art](https://frontendmasters.com/courses/canvas-webgl/)
+[GitHub](https://github.com/mattdesl/graphics-resources)
+
+- Steps
+    - Canvas-Setup
+    - Grid
+    - Random
+        - Organic Randomness (Gaussian)
+    - Colors `nice-color-palette`
+    - Noise
+    - 3D
+    - GIF Export
+    - Shaders
+    - Outlook
+        - Penplotters
+        - Blender
+
+## [Generative Machines with Matt DesLauriers](https://youtu.be/8Uo6zFwSO78)
+- gutes Intro, was _generative art_ ist
+    - making machines, that make art
+- fängt mit echt krassen Beispielen an
+- Weg über Penplotter in Generative Art
+- #plottertwitter
+- Vera Molnar
+- Sol LeWitt
+- process
+    - simple systems (treemaps example)
+    - simple on computer, hard by hand
+    - subdivision
+    - simple set of instructions produce complex result
+        - same algorithm can often be applied to 3d
+- Framework
+    - Canvas-Sketch
+    - Processing
+    - Python
+- tangible outputs
+    - textiles
+    - risograph printing
+    - silk screen printing
+    - light installations
+- process
+    - promtps → sketch on paper → code
+    - curation, lot’s and lot’s of curation
+    - exporting
+        - for social media
+        - for print
+- how to get started
+    - self-promoting his course on FrontendMasters
+    - [generativeartistry.com]()
