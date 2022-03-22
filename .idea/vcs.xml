@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/impress.js" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/impress.js/extras" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/workshop-generative-art" vcs="Git" />
+  </component>
+</project>
