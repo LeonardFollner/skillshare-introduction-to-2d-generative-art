@@ -1,3 +1,6 @@
 [submodule "workshop-generative-art"]
 	path = workshop-generative-art
 	url = git@github.com:mattdesl/workshop-generative-art.git
+[submodule "impress.js"]
+	path = impress.js
+	url = git@github.com:impress/impress.js.git
