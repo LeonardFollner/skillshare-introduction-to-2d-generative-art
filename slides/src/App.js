@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import Impress from "./Impress";
+import {useEffect} from "react";
+import Slide from "./Slide";
 
 function App() {
+  useEffect(() => {
+    const impress = window.impress;
+    if (impress) {
+      impress().init();
+    }
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Impress>
+      <Slide
+          id="first"
+          x={0}
+          y={0}
+      >
+        <h1>First Slide</h1>
+      </Slide>
+      <Slide
+          id="second"
+          relX={300}
+      >
+        <h1>Second Slide</h1>
+      </Slide>
+      <Slide
+          id="third"
+      >
+        <h1>Third Slide</h1>
+      </Slide>
+    </Impress>
   );
 }
 
