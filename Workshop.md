@@ -15,6 +15,9 @@
         - canvas-sketch
     - Communities
         - #plottertwitter
+    - Tutorials
+        - Generative Artistry
+        - The Coding Train
 - Reprogram one example
     - from setup to completion
     - Introduction to Canvas API

@@ -1,4 +1,6 @@
 import React from "react";
+import "./_Slide.scss";
+import classNames from "classnames";
 
 const Slide = (props) => {
     const {
@@ -7,12 +9,16 @@ const Slide = (props) => {
         x,
         y,
         relX,
-        relY
+        relY,
+        skip,
     } = props;
+
+    const className = classNames("step", {skip: props.skip});
+
     return (
         <div
             id={id}
-            className="step"
+            className={className}
             data-x={x}
             data-y={y}
             data-rel-x={relX}

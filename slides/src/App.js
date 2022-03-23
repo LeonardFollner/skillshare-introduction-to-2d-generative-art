@@ -2,6 +2,8 @@ import "./App.scss";
 import Impress from "./Impress";
 import {useEffect} from "react";
 import Slide from "./Slide";
+import PictureFrame from "./PictureFrame";
+import Lines from "./Slides/Lines";
 
 function App() {
   useEffect(() => {
@@ -18,7 +20,19 @@ function App() {
           x={0}
           y={0}
       >
-        <h1>First Slide</h1>
+          <h1>First Slide</h1>
+      </Slide>
+      <Slide
+          id="source"
+          relX={300}
+          skip
+      >
+          <code>Find the source code right next to the &lt;canvas&gt; in the page's source.</code>
+      </Slide>
+      <Slide
+          id="lines"
+      >
+        <Lines/>
       </Slide>
       <Slide
           id="second"
