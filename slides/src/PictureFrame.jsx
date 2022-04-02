@@ -22,6 +22,27 @@ const PictureFrame = props => {
     const canvasWidth = 300;
     const canvasHeight = 300;
 
+    const scaleCanvas = (scale = 4) => {
+        // https://devlog.disco.zone/2016/07/22/canvas-scaling/
+
+        const canvas = canvasRef.current;
+        const pixelRatio = window.devicePixelRatio || 1;
+
+        canvas.width = scale * canvasWidth * pixelRatio;
+        canvas.height = scale * canvasHeight * pixelRatio;
+
+        // canvas.style.width = `${scale * canvasWidth}px`;
+        // canvas.style.height = `${scale * canvasHeight}px`;
+
+        canvas.style.width = `${canvasWidth}px`;
+        canvas.style.height = `${canvasHeight}px`;
+
+        context.mozImageSmoothingEnabled = false;
+        context.imageSmoothingEnabled = false;
+
+        context.scale(scale * pixelRatio, scale * pixelRatio);
+    };
+
     const clearCanvas = () => {
         context.beginPath();
         context.rect(0, 0, canvasWidth, canvasHeight);
@@ -36,6 +57,7 @@ const PictureFrame = props => {
 
     const step = steps[currentStepIndex];
     if (context) {
+        scaleCanvas();
         executeCurrentStep();
     }
 

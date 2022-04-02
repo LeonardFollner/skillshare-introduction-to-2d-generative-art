@@ -24,4 +24,4 @@
 
 ## Todos
 - [ ] disable next step on click, when clicking on slide to navigate towards it
-- [ ] scale all canvases
+- [x] scale all canvases
