@@ -19,8 +19,8 @@ const PictureFrame = props => {
         setContext(context2D);
     }, [canvasRef]);
 
-    const canvasWidth = 300;
-    const canvasHeight = 300;
+    const canvasWidth = 700;
+    const canvasHeight = 700;
 
     const scaleCanvas = (scale = 4) => {
         // https://devlog.disco.zone/2016/07/22/canvas-scaling/

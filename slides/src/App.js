@@ -24,7 +24,7 @@ function App() {
       </Slide>
       <Slide
           id="source"
-          relX={300}
+          relX={900}
           skip
       >
           <code>Find the source code right next to the &lt;canvas&gt; in the page's source.</code>
@@ -36,7 +36,6 @@ function App() {
       </Slide>
       <Slide
           id="second"
-          relX={300}
       >
         <h1>Second Slide</h1>
       </Slide>

@@ -14,28 +14,28 @@ code {
     monospace;
 }
 
+// from https://www.joshwcomeau.com/shadow-palette/
 :root {
-  // from https://www.joshwcomeau.com/shadow-palette/
-  --shadow-color: 0deg 0% 72%;
+  --shadow-color: 0deg 0% 62%;
   --shadow-elevation-low:
-          -0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.24),
-          -0.5px 0.8px 1.1px -1.2px hsl(var(--shadow-color) / 0.24),
-          -1.2px 1.7px 2.3px -2.5px hsl(var(--shadow-color) / 0.24);
+          -0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+          -0.6px 0.8px 1.1px -1.2px hsl(var(--shadow-color) / 0.34),
+          -1.4px 2.1px 2.8px -2.5px hsl(var(--shadow-color) / 0.34);
   --shadow-elevation-medium:
-          -0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.2),
-          -0.8px 1.2px 1.6px -0.6px hsl(var(--shadow-color) / 0.2),
-          -1.6px 2.3px 3.2px -1.2px hsl(var(--shadow-color) / 0.2),
-          -3.1px 4.5px 6.1px -1.9px hsl(var(--shadow-color) / 0.2),
-          -5.9px 8.7px 11.8px -2.5px hsl(var(--shadow-color) / 0.2);
+          -0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.29),
+          -0.9px 1.3px 1.8px -0.6px hsl(var(--shadow-color) / 0.29),
+          -1.8px 2.6px 3.6px -1.2px hsl(var(--shadow-color) / 0.29),
+          -3.6px 5.3px 7.2px -1.9px hsl(var(--shadow-color) / 0.29),
+          -7px 10.3px 14px -2.5px hsl(var(--shadow-color) / 0.29);
   --shadow-elevation-high:
-          -0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.19),
-          -1.3px 1.9px 2.6px -0.3px hsl(var(--shadow-color) / 0.19),
-          -2.2px 3.2px 4.4px -0.6px hsl(var(--shadow-color) / 0.19),
-          -3.2px 4.8px 6.5px -0.8px hsl(var(--shadow-color) / 0.19),
-          -4.7px 6.9px 9.4px -1.1px hsl(var(--shadow-color) / 0.19),
-          -6.7px 9.9px 13.4px -1.4px hsl(var(--shadow-color) / 0.19),
-          -9.5px 13.9px 18.9px -1.7px hsl(var(--shadow-color) / 0.19),
-          -13.2px 19.4px 26.4px -1.9px hsl(var(--shadow-color) / 0.19),
-          -18.1px 26.7px 36.3px -2.2px hsl(var(--shadow-color) / 0.19),
-          -24.3px 35.9px 48.8px -2.5px hsl(var(--shadow-color) / 0.19);
+          -0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.27),
+          -1.7px 2.5px 3.4px -0.3px hsl(var(--shadow-color) / 0.27),
+          -3px 4.4px 6px -0.6px hsl(var(--shadow-color) / 0.27),
+          -4.5px 6.6px 9px -0.8px hsl(var(--shadow-color) / 0.27),
+          -6.6px 9.7px 13.2px -1.1px hsl(var(--shadow-color) / 0.27),
+          -9.4px 13.9px 18.9px -1.4px hsl(var(--shadow-color) / 0.27),
+          -13.4px 19.8px 26.9px -1.7px hsl(var(--shadow-color) / 0.27),
+          -18.8px 27.7px 37.7px -1.9px hsl(var(--shadow-color) / 0.27),
+          -25.8px 38px 51.7px -2.2px hsl(var(--shadow-color) / 0.27),
+          -34.8px 51.3px 69.7px -2.5px hsl(var(--shadow-color) / 0.27);
 }
