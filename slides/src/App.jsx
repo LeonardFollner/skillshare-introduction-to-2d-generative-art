@@ -3,6 +3,7 @@ import Impress from "./Impress";
 import {useEffect} from "react";
 import Slide from "./Slide";
 import Lines from "./Slides/Lines";
+import Tiling from "./Slides/Tiling";
 
 function App() {
   useEffect(() => {
@@ -33,9 +34,9 @@ function App() {
         <Lines/>
       </Slide>
       <Slide
-          id="lines-two"
+          id="tiling"
       >
-        <Lines/>
+        <Tiling/>
       </Slide>
       <Slide
           id="second"
