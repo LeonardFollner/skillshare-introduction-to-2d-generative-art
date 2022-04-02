@@ -1,5 +1,4 @@
 import React, {useEffect, useRef, useState} from "react";
-import "./_PictureFrame.scss";
 
 const PictureFrame = props => {
     const debug = true;

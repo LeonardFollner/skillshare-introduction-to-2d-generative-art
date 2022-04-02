@@ -2,7 +2,6 @@ import "./App.scss";
 import Impress from "./Impress";
 import {useEffect} from "react";
 import Slide from "./Slide";
-import PictureFrame from "./PictureFrame";
 import Lines from "./Slides/Lines";
 
 function App() {
@@ -25,7 +24,6 @@ function App() {
       <Slide
           id="source"
           relX={900}
-          skip
       >
           <code>Find the source code right next to the &lt;canvas&gt; in the page's source.</code>
       </Slide>
