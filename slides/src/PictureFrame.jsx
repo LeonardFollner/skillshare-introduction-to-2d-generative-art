@@ -18,12 +18,18 @@ const PictureFrame = props => {
         setContext(context2D);
     }, [canvasRef]);
 
+    // initiate once canvas is ready
     useEffect(() => {
         if (context) {
-            // for development or faster rendering
             scaleCanvas();
         }
     }, [context]);
+
+    useEffect(() => {
+        if (context) {
+            executeCurrentStep();
+        }
+    }, [context, currentStepIndex]);
 
     const canvasWidth = 500;
     const canvasHeight = 500;
@@ -53,15 +59,12 @@ const PictureFrame = props => {
         context.clearRect(0, 0, canvasWidth, canvasHeight);
     };
 
+    const step = steps[currentStepIndex];
+
     const executeCurrentStep = () => {
         clearCanvas();
         step(context, canvasWidth, canvasHeight);
     };
-
-    const step = steps[currentStepIndex];
-    if (context) {
-        executeCurrentStep();
-    }
 
     const handleCanvasClick = () => {
         const nextStepIndex = currentStepIndex + 1;

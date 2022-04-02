@@ -40,7 +40,7 @@ const Lines = () => {
     return (
         <PictureFrame
             steps={steps}
-            title="kleines »Etikett« auf dem der Name des Kunstwerkes steht"
+            title="Lines"
         >
         </PictureFrame>
     );
