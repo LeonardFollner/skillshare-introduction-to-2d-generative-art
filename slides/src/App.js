@@ -35,6 +35,11 @@ function App() {
         <Lines/>
       </Slide>
       <Slide
+          id="lines-two"
+      >
+        <Lines/>
+      </Slide>
+      <Slide
           id="second"
       >
         <h1>Second Slide</h1>
