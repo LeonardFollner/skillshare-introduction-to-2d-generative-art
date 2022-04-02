@@ -59,7 +59,7 @@ const PictureFrame = props => {
                 onClick={handleCanvasClick}
             />
             {debug ? <div>step {currentStepIndex + 1} of {steps.length}</div> : null}
-            {title ? <div>{title}</div> : null}
+            {title ? <div className="label">{title}</div> : null}
             <script dangerouslySetInnerHTML={{__html: step}}>
             </script>
         </>

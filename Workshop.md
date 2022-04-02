@@ -21,3 +21,7 @@
 - Reprogram one example
     - from setup to completion
     - Introduction to Canvas API
+
+## Todos
+- [ ] disable next step on click, when clicking on slide to navigate towards it
+- [ ] scale all canvases

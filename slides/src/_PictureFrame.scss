@@ -1,3 +1,12 @@
 .picture-frame {
-  border: 5px solid black;
+  border: 10px solid black;
+  box-shadow: var(--shadow-elevation-high);
+
+}
+
+.label {
+  background-color: white;
+  padding: 5px;
+  border: 1px solid black;
+  box-shadow: var(--shadow-elevation-low);
 }
