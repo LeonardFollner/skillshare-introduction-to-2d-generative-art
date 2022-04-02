@@ -15,8 +15,10 @@
 }
 
 .label {
+  margin: 20px;
+  float: right;
   background-color: white;
   padding: 5px;
-  border: 1px solid #aaa;
+  border: 1px solid $grey;
   box-shadow: var(--shadow-elevation-low);
 }

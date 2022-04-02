@@ -1,4 +1,3 @@
-import "./App.scss";
 import Impress from "./Impress";
 import {useEffect} from "react";
 import Slide from "./Slide";

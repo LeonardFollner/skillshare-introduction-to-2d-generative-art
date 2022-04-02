@@ -92,7 +92,7 @@ const PictureFrame = props => {
             </div>
             <div className="label">
                 {title ? title : null}
-                {debug ? <div>step {currentStepIndex + 1} of {steps.length}</div> : null}
+                {debug ? <div className="hint">step {currentStepIndex + 1} of {steps.length}</div> : null}
             </div>
             <script dangerouslySetInnerHTML={{__html: step}}>
             </script>
