@@ -4,6 +4,7 @@ import PictureFrame from "../PictureFrame";
 const Tiling = () => {
     const tiling100 = (context, canvasWidth, canvasHeight) => {
         const drawTile = (context, x, y, width, height) => {
+            context.beginPath();
             if (Math.random() > 0.5) {
                 context.moveTo(x + width, y);
                 context.lineTo(x, y + height);
@@ -26,6 +27,7 @@ const Tiling = () => {
 
     const tiling20 = (context, canvasWidth, canvasHeight) => {
         const drawTile = (context, x, y, width, height) => {
+            context.beginPath();
             if (Math.random() > 0.5) {
                 context.moveTo(x + width, y);
                 context.lineTo(x, y + height);
@@ -47,6 +49,7 @@ const Tiling = () => {
 
     const tilingVertical20 = (context, canvasWidth, canvasHeight) => {
         const drawTile = (context, x, y, width, height) => {
+            context.beginPath();
             if (Math.random() > 0.5) {
                 context.moveTo(x + width/2, y);
                 context.lineTo(x + width/2, y + height);

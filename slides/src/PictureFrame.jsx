@@ -21,7 +21,7 @@ const PictureFrame = props => {
     useEffect(() => {
         if (context) {
             // for development or faster rendering
-            // scaleCanvas(1);
+            scaleCanvas();
         }
     }, [context]);
 
@@ -50,9 +50,7 @@ const PictureFrame = props => {
     };
 
     const clearCanvas = () => {
-        context.fillStyle = backgroundColor ? backgroundColor : "white";
-
-        context.fillRect(0, 0, canvasWidth, canvasHeight);
+        context.clearRect(0, 0, canvasWidth, canvasHeight);
     };
 
     const executeCurrentStep = () => {

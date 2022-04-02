@@ -3,6 +3,7 @@ import PictureFrame from "../PictureFrame";
 
 const Lines = () => {
     const line = (context, canvasWidth, canvasHeight) => {
+        context.beginPath();
         context.moveTo(0, 0);
         context.lineTo(canvasWidth, canvasHeight);
         context.strokeStyle = "black";
@@ -10,6 +11,7 @@ const Lines = () => {
     };
 
     const diagonalLine = (context, canvasWidth, canvasHeight) => {
+        context.beginPath();
         context.moveTo(canvasWidth, 0);
         context.lineTo(0, canvasHeight);
         context.strokeStyle = "black";
@@ -17,6 +19,7 @@ const Lines = () => {
     };
 
     const randomLine = (context, canvasWidth, canvasHeight) => {
+        context.beginPath();
         if (Math.random() > 0.5) {
             context.moveTo(canvasWidth, 0);
             context.lineTo(0, canvasHeight);
