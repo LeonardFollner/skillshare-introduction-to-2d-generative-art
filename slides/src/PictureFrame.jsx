@@ -18,8 +18,15 @@ const PictureFrame = props => {
         setContext(context2D);
     }, [canvasRef]);
 
-    const canvasWidth = 700;
-    const canvasHeight = 700;
+    useEffect(() => {
+        if (context) {
+            // for development or faster rendering
+            // scaleCanvas(1);
+        }
+    }, [context]);
+
+    const canvasWidth = 500;
+    const canvasHeight = 500;
 
     const scaleCanvas = (scale = 4) => {
         // https://devlog.disco.zone/2016/07/22/canvas-scaling/
@@ -43,10 +50,9 @@ const PictureFrame = props => {
     };
 
     const clearCanvas = () => {
-        context.beginPath();
-        context.rect(0, 0, canvasWidth, canvasHeight);
         context.fillStyle = backgroundColor ? backgroundColor : "white";
-        context.fill();
+
+        context.fillRect(0, 0, canvasWidth, canvasHeight);
     };
 
     const executeCurrentStep = () => {
@@ -56,7 +62,6 @@ const PictureFrame = props => {
 
     const step = steps[currentStepIndex];
     if (context) {
-        scaleCanvas();
         executeCurrentStep();
     }
 
@@ -72,15 +77,22 @@ const PictureFrame = props => {
 
     return (
         <>
-            <canvas
-                className="picture-frame"
-                ref={canvasRef}
-                width={canvasWidth}
-                height={canvasHeight}
-                onClick={handleCanvasClick}
-            />
-            {debug ? <div>step {currentStepIndex + 1} of {steps.length}</div> : null}
-            {title ? <div className="label">{title}</div> : null}
+            <div className="picture__border">
+                <div className="picture__frame">
+                    <div className="picture__passepartout">
+                        <canvas
+                            ref={canvasRef}
+                            width={canvasWidth}
+                            height={canvasHeight}
+                            onClick={handleCanvasClick}
+                        />
+                    </div>
+                </div>
+            </div>
+            <div className="label">
+                {title ? title : null}
+                {debug ? <div>step {currentStepIndex + 1} of {steps.length}</div> : null}
+            </div>
             <script dangerouslySetInnerHTML={{__html: step}}>
             </script>
         </>

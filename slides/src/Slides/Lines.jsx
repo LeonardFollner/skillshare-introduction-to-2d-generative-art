@@ -5,14 +5,14 @@ const Lines = () => {
     const line = (context, canvasWidth, canvasHeight) => {
         context.moveTo(0, 0);
         context.lineTo(canvasWidth, canvasHeight);
-        context.strokeStyle = "purple";
+        context.strokeStyle = "black";
         context.stroke();
     };
 
     const diagonalLine = (context, canvasWidth, canvasHeight) => {
         context.moveTo(canvasWidth, 0);
         context.lineTo(0, canvasHeight);
-        context.strokeStyle = "purple";
+        context.strokeStyle = "black";
         context.stroke();
     };
 
@@ -24,7 +24,7 @@ const Lines = () => {
             context.moveTo(0, 0);
             context.lineTo(canvasWidth, canvasHeight);
         }
-        context.strokeStyle = "purple";
+        context.strokeStyle = "black";
         context.stroke();
     };
 

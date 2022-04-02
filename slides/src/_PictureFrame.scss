@@ -1,12 +1,22 @@
-.picture-frame {
-  border: 10px solid $black;
+.picture__border {
+  background: white;
+  border: 20px solid $black;
   box-shadow: var(--shadow-elevation-high);
+}
 
+.picture__frame {
+  box-shadow: inset -1px 1px 6px 1px rgba(0,0,0,.24);
+  padding: 50px;
+}
+
+.picture__passepartout {
+    //box-shadow: inset -1px 1px 6px 1px rgba(0,0,0,.24);
+  border: 1px solid #efefef;
 }
 
 .label {
   background-color: white;
   padding: 5px;
-  border: 1px solid $black;
+  border: 1px solid #aaa;
   box-shadow: var(--shadow-elevation-low);
 }
