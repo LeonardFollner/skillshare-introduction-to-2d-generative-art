@@ -8,7 +8,8 @@ const replaceHelperFunctionComments = (fun, helperFunctions) => {
     const helperFunctionNames = Object.keys(helperFunctions);
     helperFunctionNames.forEach(helperFunctionName => {
         const helperFunction = helperFunctions[helperFunctionName];
-        functionString = functionString.replace(`//\${${helperFunctionName}}`, `const ${helperFunctionName} = ${helperFunction.toString()}\n`);
+        const helperFunctionString = helperFunction.toString().replaceAll("\n  ", "\n    ");
+        functionString = functionString.replace(`//\${${helperFunctionName}}`, `const ${helperFunctionName} = ${helperFunctionString}\n`);
     });
 
     return eval(functionString);
