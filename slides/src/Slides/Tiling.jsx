@@ -1,21 +1,38 @@
 import React from "react";
 import PictureFrame from "../PictureFrame";
+import {replaceHelperFunctionComments} from "../helper";
 
 const Tiling = () => {
+    const drawTile = (context, x, y, width, height) => {
+        context.beginPath();
+        if (Math.random() > 0.5) {
+            context.moveTo(x + width, y);
+            context.lineTo(x, y + height);
+        } else {
+            context.moveTo(x, y);
+            context.lineTo(x + width, y + height);
+        }
+        context.strokeStyle = "black";
+        context.lineWidth = 2;
+        context.stroke();
+    };
+
+    const drawVerticalTile = (context, x, y, width, height) => {
+        context.beginPath();
+        if (Math.random() > 0.5) {
+            context.moveTo(x + width/2, y);
+            context.lineTo(x + width/2, y + height);
+        } else {
+            context.moveTo(x, y + height/2);
+            context.lineTo(x + width, y + height/2);
+        }
+        context.strokeStyle = "black";
+        context.lineWidth = 2;
+        context.stroke();
+    };
+
     const tiling250 = (context, canvasWidth, canvasHeight) => {
-        const drawTile = (context, x, y, width, height) => {
-            context.beginPath();
-            if (Math.random() > 0.5) {
-                context.moveTo(x + width, y);
-                context.lineTo(x, y + height);
-            } else {
-                context.moveTo(x, y);
-                context.lineTo(x + width, y + height);
-            }
-            context.strokeStyle = "black";
-            context.lineWidth = 2;
-            context.stroke();
-        };
+        //${drawTile}
 
         const stepSize = 250;
         for (let y = 0; y < canvasHeight; y += stepSize) {
@@ -26,19 +43,7 @@ const Tiling = () => {
     };
 
     const tiling100 = (context, canvasWidth, canvasHeight) => {
-        const drawTile = (context, x, y, width, height) => {
-            context.beginPath();
-            if (Math.random() > 0.5) {
-                context.moveTo(x + width, y);
-                context.lineTo(x, y + height);
-            } else {
-                context.moveTo(x, y);
-                context.lineTo(x + width, y + height);
-            }
-            context.strokeStyle = "black";
-            context.lineWidth = 2;
-            context.stroke();
-        };
+        //${drawTile}
 
         const stepSize = 100;
         for (let y = 0; y < canvasHeight; y += stepSize) {
@@ -49,19 +54,8 @@ const Tiling = () => {
     };
 
     const tiling50 = (context, canvasWidth, canvasHeight) => {
-        const drawTile = (context, x, y, width, height) => {
-            context.beginPath();
-            if (Math.random() > 0.5) {
-                context.moveTo(x + width, y);
-                context.lineTo(x, y + height);
-            } else {
-                context.moveTo(x, y);
-                context.lineTo(x + width, y + height);
-            }
-            context.strokeStyle = "black";
-            context.lineWidth = 2;
-            context.stroke();
-        };
+        //${drawTile}
+
         const stepSize = 50;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -71,19 +65,8 @@ const Tiling = () => {
     };
 
     const tiling20 = (context, canvasWidth, canvasHeight) => {
-        const drawTile = (context, x, y, width, height) => {
-            context.beginPath();
-            if (Math.random() > 0.5) {
-                context.moveTo(x + width, y);
-                context.lineTo(x, y + height);
-            } else {
-                context.moveTo(x, y);
-                context.lineTo(x + width, y + height);
-            }
-            context.strokeStyle = "black";
-            context.lineWidth = 2;
-            context.stroke();
-        };
+        //${drawTile}
+
         const stepSize = 20;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -93,92 +76,50 @@ const Tiling = () => {
     };
 
     const tilingVertical250 = (context, canvasWidth, canvasHeight) => {
-        const drawTile = (context, x, y, width, height) => {
-            context.beginPath();
-            if (Math.random() > 0.5) {
-                context.moveTo(x + width/2, y);
-                context.lineTo(x + width/2, y + height);
-            } else {
-                context.moveTo(x, y + height/2);
-                context.lineTo(x + width, y + height/2);
-            }
-            context.strokeStyle = "black";
-            context.lineWidth = 2;
-            context.stroke();
-        };
+        //${drawVerticalTile}
+
         const stepSize = 250;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
-                drawTile(context, x, y, stepSize, stepSize);
+                drawVerticalTile(context, x, y, stepSize, stepSize);
             }
         }
     };
 
     const tilingVertical100 = (context, canvasWidth, canvasHeight) => {
-        const drawTile = (context, x, y, width, height) => {
-            context.beginPath();
-            if (Math.random() > 0.5) {
-                context.moveTo(x + width/2, y);
-                context.lineTo(x + width/2, y + height);
-            } else {
-                context.moveTo(x, y + height/2);
-                context.lineTo(x + width, y + height/2);
-            }
-            context.strokeStyle = "black";
-            context.lineWidth = 2;
-            context.stroke();
-        };
+        //${drawVerticalTile}
+
         const stepSize = 100;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
-                drawTile(context, x, y, stepSize, stepSize);
+                drawVerticalTile(context, x, y, stepSize, stepSize);
             }
         }
     };
 
     const tilingVertical50 = (context, canvasWidth, canvasHeight) => {
-        const drawTile = (context, x, y, width, height) => {
-            context.beginPath();
-            if (Math.random() > 0.5) {
-                context.moveTo(x + width/2, y);
-                context.lineTo(x + width/2, y + height);
-            } else {
-                context.moveTo(x, y + height/2);
-                context.lineTo(x + width, y + height/2);
-            }
-            context.strokeStyle = "black";
-            context.lineWidth = 2;
-            context.stroke();
-        };
+        //${drawVerticalTile}
+
         const stepSize = 50;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
-                drawTile(context, x, y, stepSize, stepSize);
+                drawVerticalTile(context, x, y, stepSize, stepSize);
             }
         }
     };
 
     const tilingVertical20 = (context, canvasWidth, canvasHeight) => {
-        const drawTile = (context, x, y, width, height) => {
-            context.beginPath();
-            if (Math.random() > 0.5) {
-                context.moveTo(x + width/2, y);
-                context.lineTo(x + width/2, y + height);
-            } else {
-                context.moveTo(x, y + height/2);
-                context.lineTo(x + width, y + height/2);
-            }
-            context.strokeStyle = "black";
-            context.lineWidth = 2;
-            context.stroke();
-        };
+        //${drawVerticalTile}
+
         const stepSize = 20;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
-                drawTile(context, x, y, stepSize, stepSize);
+                drawVerticalTile(context, x, y, stepSize, stepSize);
             }
         }
     };
+
+    const helperFunctions = {drawTile, drawVerticalTile};
 
     const steps = [
         tiling250,
@@ -191,9 +132,11 @@ const Tiling = () => {
         tilingVertical20,
     ];
 
+    const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
+
     return (
         <PictureFrame
-            steps={steps}
+            steps={stepsWithHelperFunctionsInlined}
             title="Tiling"
         >
         </PictureFrame>
