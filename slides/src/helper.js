@@ -9,7 +9,7 @@ const replaceHelperFunctionComments = (fun, helperFunctions) => {
     helperFunctionNames.forEach(helperFunctionName => {
         const helperFunction = helperFunctions[helperFunctionName];
         const helperFunctionString = helperFunction.toString().replaceAll("\n  ", "\n    ");
-        functionString = functionString.replace(`//\${${helperFunctionName}}`, `const ${helperFunctionName} = ${helperFunctionString}\n`);
+        functionString = functionString.replace(`//\${${helperFunctionName}}`, `const ${helperFunctionName} = ${helperFunctionString};\n`);
     });
 
     return eval(functionString);

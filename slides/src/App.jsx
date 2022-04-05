@@ -3,6 +3,7 @@ import {useEffect} from "react";
 import Slide from "./Slide";
 import Lines from "./Slides/Lines";
 import Tiling from "./Slides/Tiling";
+import Displacement from "./Slides/Displacement";
 
 function App() {
   useEffect(() => {
@@ -25,7 +26,7 @@ function App() {
           id="source"
           relX={900}
       >
-          <code>Find the source code right next to the &lt;canvas&gt; in the page's source.</code>
+          <code>Find the active source code right next to the &lt;canvas&gt; in the page's source.</code>
       </Slide>
       <Slide
           id="lines"
@@ -38,14 +39,9 @@ function App() {
         <Tiling/>
       </Slide>
       <Slide
-          id="second"
+          id="displacement"
       >
-        <h1>Second Slide</h1>
-      </Slide>
-      <Slide
-          id="third"
-      >
-        <h1>Third Slide</h1>
+        <Displacement/>
       </Slide>
     </Impress>
   );
