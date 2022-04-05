@@ -32,12 +32,10 @@ const CurvesDisplacement = () => {
         context.fillRect(0, 0, canvasWidth, canvasHeight);
     };
 
-    const drawLines = (context, canvasWidth, canvasHeight, lines) => {
-        context.strokeStyle = "white";
+    const drawLines = (context, canvasWidth, canvasHeight, lines, lineColor, backgroundColor) => {
+        context.strokeStyle = lineColor;
         context.lineWidth = 2;
-        context.fillStyle = "black";
-
-        background(context, canvasWidth, canvasHeight, "black");
+        context.fillStyle = backgroundColor;
 
         lines.forEach(points => {
             context.beginPath();
@@ -54,8 +52,6 @@ const CurvesDisplacement = () => {
         context.strokeStyle = "white";
         context.lineWidth = 2;
         context.fillStyle = "black";
-
-        background(context, canvasWidth, canvasHeight, "black");
 
         lines.forEach(points => {
             context.beginPath();
@@ -79,22 +75,35 @@ const CurvesDisplacement = () => {
         //${background}
 
         const lines = generateLines(canvasWidth, canvasHeight);
-        drawLines(context, canvasWidth, canvasHeight, lines);
+        drawLines(context, canvasWidth, canvasHeight, lines, "black", "white");
+    };
+
+    // straight lines
+    const step1 = (context, canvasWidth, canvasHeight) => {
+        //${generateLines}
+        //${drawLines}
+        //${background}
+
+        background(context, canvasWidth, canvasHeight, "black");
+        const lines = generateLines(canvasWidth, canvasHeight);
+        drawLines(context, canvasWidth, canvasHeight, lines, "white", "black");
     };
 
     // curves
-    const step1 = (context, canvasWidth, canvasHeight) => {
+    const step2 = (context, canvasWidth, canvasHeight) => {
         //${generateLines}
         //${background}
         //${drawCurves}
 
+        background(context, canvasWidth, canvasHeight, "black");
         const lines = generateLines(canvasWidth, canvasHeight);
-        drawCurves(context, canvasWidth, canvasHeight, lines);
+        drawCurves(context, canvasWidth, canvasHeight, lines, "white", "black");
     };
 
     const steps = [
         step0,
         step1,
+        step2,
     ];
 
     const helperFunctions = {generateLines, background, drawLines, drawCurves};
