@@ -95,7 +95,7 @@ const Curves = () => {
     return (
         <PictureFrame
             steps={stepsWithHelperFunctionsInlined}
-            title="Curves"
+            title="Curves + Tiling"
         >
         </PictureFrame>
     );

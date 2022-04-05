@@ -58,7 +58,7 @@ const Displacement = () => {
     return (
         <PictureFrame
             steps={stepsWithHelperFunctionsInlined}
-            title="Curve Displacement"
+            title="Curves + Displacement"
         >
         </PictureFrame>
     );

@@ -49,7 +49,7 @@ const Squares = () => {
     return (
         <PictureFrame
             steps={stepsWithHelperFunctionsInlined}
-            title="Squares"
+            title="Repetition"
         >
         </PictureFrame>
     );

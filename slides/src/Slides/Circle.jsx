@@ -74,7 +74,7 @@ const Circle = () => {
     return (
         <PictureFrame
             steps={stepsWithHelperFunctionsInlined}
-            title="Circle"
+            title="Repetition + Displacement"
         >
         </PictureFrame>
     );

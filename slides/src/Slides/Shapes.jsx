@@ -9,7 +9,6 @@ const Shapes = () => {
 
         const random = Math.random();
         if (random < 0.25) { // top left
-            console.log("top left");
             context.moveTo(x, y);
             context.lineTo(x + size, y);
             context.lineTo(x, y + size);
@@ -128,7 +127,7 @@ const Shapes = () => {
     return (
         <PictureFrame
             steps={stepsWithHelperFunctionsInlined}
-            title="Shapes"
+            title="Shapes + Tiling"
         >
         </PictureFrame>
     );

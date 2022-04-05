@@ -81,7 +81,7 @@ const DisplacementRepetition = () => {
     return (
         <PictureFrame
             steps={stepsWithHelperFunctionsInlined}
-            title="Displacement Repetition"
+            title="Displacement + Repetition"
         >
         </PictureFrame>
     );
