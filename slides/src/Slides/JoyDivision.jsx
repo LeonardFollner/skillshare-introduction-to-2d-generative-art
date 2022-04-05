@@ -2,7 +2,7 @@ import React from "react";
 import PictureFrame from "../PictureFrame";
 import {replaceHelperFunctionComments} from "../helper";
 
-const CurvesDisplacement = () => {
+const JoyDivision = () => {
     const generateLines = (canvasWidth, canvasHeight) => {
         const stepX = 20;
         const stepY = 20;
@@ -32,26 +32,10 @@ const CurvesDisplacement = () => {
         context.fillRect(0, 0, canvasWidth, canvasHeight);
     };
 
-    const drawLines = (context, canvasWidth, canvasHeight, lines, lineColor, backgroundColor) => {
+    const drawCurves = (context, canvasWidth, canvasHeight, lines, lineColor, backgroundColor) => {
         context.strokeStyle = lineColor;
         context.lineWidth = 2;
         context.fillStyle = backgroundColor;
-
-        lines.forEach(points => {
-            context.beginPath();
-            context.moveTo(points[0].x, points[0].y);
-            points.forEach(point => {
-                context.lineTo(point.x, point.y);
-            });
-            context.stroke();
-            context.fill();
-        });
-    };
-
-    const drawCurves = (context, canvasWidth, canvasHeight, lines) => {
-        context.strokeStyle = "white";
-        context.lineWidth = 2;
-        context.fillStyle = "black";
 
         lines.forEach(points => {
             context.beginPath();
@@ -68,32 +52,21 @@ const CurvesDisplacement = () => {
         });
     };
 
-    // straight lines
+    // centered noise
     const step0 = (context, canvasWidth, canvasHeight) => {
         //${generateLines}
-        //${drawLines}
+        //${drawCurves}
         //${background}
 
         const lines = generateLines(canvasWidth, canvasHeight);
-        drawLines(context, canvasWidth, canvasHeight, lines, "black", "white");
+        drawCurves(context, canvasWidth, canvasHeight, lines, "black", "white");
     };
 
-    // straight lines
+    // black background
     const step1 = (context, canvasWidth, canvasHeight) => {
         //${generateLines}
-        //${drawLines}
-        //${background}
-
-        background(context, canvasWidth, canvasHeight, "black");
-        const lines = generateLines(canvasWidth, canvasHeight);
-        drawLines(context, canvasWidth, canvasHeight, lines, "white", "black");
-    };
-
-    // curves
-    const step2 = (context, canvasWidth, canvasHeight) => {
-        //${generateLines}
-        //${background}
         //${drawCurves}
+        //${background}
 
         background(context, canvasWidth, canvasHeight, "black");
         const lines = generateLines(canvasWidth, canvasHeight);
@@ -103,10 +76,9 @@ const CurvesDisplacement = () => {
     const steps = [
         step0,
         step1,
-        step2,
     ];
 
-    const helperFunctions = {generateLines, background, drawLines, drawCurves};
+    const helperFunctions = {generateLines, background, drawCurves};
 
     const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
 
@@ -119,4 +91,4 @@ const CurvesDisplacement = () => {
     );
 }
 
-export default CurvesDisplacement;
+export default JoyDivision;

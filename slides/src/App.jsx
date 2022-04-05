@@ -6,8 +6,10 @@ import Tiling from "./Slides/Tiling";
 import Displacement from "./Slides/Displacement";
 import TilingVertical from "./Slides/TilingVertical";
 import Curves from "./Slides/Curves";
-import CurvesDisplacement from "./Slides/CurvesDisplacement";
+import JoyDivision from "./Slides/JoyDivision";
 import Repetition from "./Slides/Repetition";
+import DisplacementRepetition from "./Slides/DisplacementRepetition";
+import CurveDisplacement from "./Slides/CurveDisplacement";
 
 function App() {
   useEffect(() => {
@@ -58,14 +60,24 @@ function App() {
         <Curves/>
       </Slide>
       <Slide
-          id="curves-displacement"
+          id="curve-displacement"
       >
-        <CurvesDisplacement/>
+        <CurveDisplacement/>
+      </Slide>
+      <Slide
+          id="joy-division"
+      >
+        <JoyDivision/>
       </Slide>
       <Slide
           id="repetition"
       >
         <Repetition/>
+      </Slide>
+      <Slide
+          id="displacement-repetition"
+      >
+        <DisplacementRepetition/>
       </Slide>
     </Impress>
   );
