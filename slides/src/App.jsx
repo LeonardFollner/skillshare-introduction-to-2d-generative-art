@@ -7,6 +7,7 @@ import Displacement from "./Slides/Displacement";
 import TilingVertical from "./Slides/TilingVertical";
 import Curves from "./Slides/Curves";
 import CurvesDisplacement from "./Slides/CurvesDisplacement";
+import Repetition from "./Slides/Repetition";
 
 function App() {
   useEffect(() => {
@@ -60,6 +61,11 @@ function App() {
           id="curves-displacement"
       >
         <CurvesDisplacement/>
+      </Slide>
+      <Slide
+          id="repetition"
+      >
+        <Repetition/>
       </Slide>
     </Impress>
   );
