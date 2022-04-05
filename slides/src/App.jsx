@@ -4,6 +4,7 @@ import Slide from "./Slide";
 import Lines from "./Slides/Lines";
 import Tiling from "./Slides/Tiling";
 import Displacement from "./Slides/Displacement";
+import TilingVertical from "./Slides/TilingVertical";
 
 function App() {
   useEffect(() => {
@@ -37,6 +38,11 @@ function App() {
           id="tiling"
       >
         <Tiling/>
+      </Slide>
+      <Slide
+          id="tiling-vertical"
+      >
+        <TilingVertical/>
       </Slide>
       <Slide
           id="displacement"
