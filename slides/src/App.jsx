@@ -10,6 +10,9 @@ import JoyDivision from "./Slides/JoyDivision";
 import Repetition from "./Slides/Repetition";
 import DisplacementRepetition from "./Slides/DisplacementRepetition";
 import CurveDisplacement from "./Slides/CurveDisplacement";
+import Shapes from "./Slides/Shapes";
+import Squares from "./Slides/Squares";
+import Circle from "./Slides/Circle";
 
 function App() {
   useEffect(() => {
@@ -78,6 +81,21 @@ function App() {
           id="displacement-repetition"
       >
         <DisplacementRepetition/>
+      </Slide>
+      <Slide
+          id="shapes"
+      >
+        <Shapes/>
+      </Slide>
+      <Slide
+          id="squares"
+      >
+        <Squares/>
+      </Slide>
+        <Slide
+          id="circle"
+      >
+        <Circle/>
       </Slide>
     </Impress>
   );
