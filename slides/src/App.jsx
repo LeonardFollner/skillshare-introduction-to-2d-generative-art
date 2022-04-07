@@ -13,6 +13,10 @@ import CurveDisplacement from "./Slides/CurveDisplacement";
 import Shapes from "./Slides/Shapes";
 import Squares from "./Slides/Squares";
 import Circle from "./Slides/Circle";
+import Recursion from "./Slides/Recursion";
+import Serpinki from "./Slides/Serpinki";
+import Tree from "./Slides/Tree";
+import Iris from "./Slides/Iris";
 
 function App() {
   useEffect(() => {
@@ -92,10 +96,30 @@ function App() {
       >
         <Squares/>
       </Slide>
-        <Slide
+      <Slide
           id="circle"
       >
         <Circle/>
+      </Slide>
+      <Slide
+          id="recursion"
+      >
+        <Recursion/>
+      </Slide>
+      <Slide
+          id="serpinski"
+      >
+        <Serpinki/>
+      </Slide>
+      <Slide
+          id="tree"
+      >
+        <Tree/>
+      </Slide>
+      <Slide
+          id="iris"
+      >
+        <Iris/>
       </Slide>
     </Impress>
   );

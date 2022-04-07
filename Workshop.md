@@ -24,6 +24,7 @@
 - Reprogram one example
     - from setup to completion
     - Introduction to Canvas API
+    - every one a different piece by Sol LeWitt?
 
 ## Todos
 - [ ] disable next step on click, when clicking on slide to navigate towards it
