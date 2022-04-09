@@ -14,15 +14,14 @@ import shades from "./images/9 shades.png";
 const ColorSchemes = () => {
     return (
         <>
-            <h1>
-                <a href="https://color.adobe.com" target="_blank">color.adobe.com</a>
-            </h1>
             <div style={{
                 display: "grid",
                 gridTemplateColumns: "1fr 1fr 1fr",
-                columnGap: "10px",
-                rowGap: "10px",
+                columnGap: "40px",
+                rowGap: "40px",
                 justifyItems: "center",
+                height: "100%",
+                alignContent: "center"
             }}>
                 <img src={analogous} height="200px"/>
                 <img src={monochromatic} height="200px"/>
