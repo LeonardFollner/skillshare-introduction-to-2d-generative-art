@@ -1,6 +1,7 @@
 @import "_Variables";
 @import "_App";
 @import "_PictureFrame";
+@import "_Slide";
 
 body {
   margin: 0;
@@ -14,9 +15,18 @@ body {
   color: $black;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a {
+  color: #009ec9;
+  text-decoration: none;
 }
 
 // from https://www.joshwcomeau.com/shadow-palette/

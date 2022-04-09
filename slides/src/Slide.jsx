@@ -1,5 +1,4 @@
 import React from "react";
-import "./_Slide.scss";
 import classNames from "classnames";
 
 const Slide = (props) => {
@@ -11,9 +10,12 @@ const Slide = (props) => {
         relX,
         relY,
         skip,
+        hide,
+        slide,
+        scale
     } = props;
 
-    const className = classNames("step", {skip: props.skip});
+    const className = classNames("step", {skip: props.skip}, {hide: props.hide}, {slide: props.slide});
 
     return (
         <div
@@ -23,6 +25,7 @@ const Slide = (props) => {
             data-y={y}
             data-rel-x={relX}
             data-rel-y={relY}
+            data-scale={scale}
         >
             {children}
         </div>

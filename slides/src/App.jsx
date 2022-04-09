@@ -17,6 +17,10 @@ import Recursion from "./Slides/Recursion";
 import Serpinki from "./Slides/Serpinki";
 import Tree from "./Slides/Tree";
 import Iris from "./Slides/Iris";
+import ColorsRGB from "./Slides/ColorsRGB";
+import ColorsHSL from "./Slides/ColorsHSL";
+import ColorSchemes from "./Slides/ColorSchemes";
+import ColorPalettes from "./Slides/ColorPalettes";
 
 function App() {
   useEffect(() => {
@@ -120,6 +124,32 @@ function App() {
           id="iris"
       >
         <Iris/>
+      </Slide>
+      <Slide
+          id="colorsRGB"
+          hide
+      >
+        <ColorsRGB/>
+      </Slide>
+      <Slide
+          id="colorsHSL"
+          hide
+      >
+        <ColorsHSL/>
+      </Slide>
+      <Slide
+          id="adobe"
+          hide
+          slide
+      >
+          <ColorSchemes/>
+      </Slide>
+      <Slide
+          id="palettes"
+          hide
+          slide
+      >
+          <ColorPalettes/>
       </Slide>
     </Impress>
   );

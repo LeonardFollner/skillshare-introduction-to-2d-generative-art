@@ -25,7 +25,7 @@
         - Serpinski Triangle
         - Branching
             - Tiling
-    - Colors
+    - ColorsRGB
         - random colors --> difficult
             - work around rotate around hue
             - best: go on palette website
@@ -61,7 +61,7 @@
     - Grid
     - Random
         - Organic Randomness (Gaussian)
-    - Colors `nice-color-palette`
+    - ColorsRGB `nice-color-palette`
     - Noise
     - 3D
     - GIF Export
