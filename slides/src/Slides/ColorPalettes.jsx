@@ -43,7 +43,7 @@ const ColorPalettes = () => {
 
     return (
         <div style={{display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px 20px", height: "100%", alignContent: "center"}}>
-            {palettes.map(palette => <Palette palette={palette}/>)}
+            {palettes.map((palette, index) => <Palette key={index} palette={palette}/>)}
         </div>
     );
 }

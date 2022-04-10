@@ -7,6 +7,8 @@ const PictureFrame = props => {
         steps,
         backgroundColor,
         title,
+        dontClearCanvas,
+        dontRepeatLastStep,
     } = props;
 
     const canvasRef = useRef(null);
@@ -62,7 +64,9 @@ const PictureFrame = props => {
     const step = steps[currentStepIndex];
 
     const executeCurrentStep = () => {
-        clearCanvas();
+        if (!dontClearCanvas) {
+            clearCanvas();
+        }
         step(context, canvasWidth, canvasHeight);
     };
 
@@ -71,7 +75,7 @@ const PictureFrame = props => {
 
         if (nextStepIndex < steps.length) {
             setCurrentStepIndex(nextStepIndex);
-        } else {
+        } else if (!dontRepeatLastStep) {
             executeCurrentStep();
         }
     };

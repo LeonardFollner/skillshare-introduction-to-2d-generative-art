@@ -21,4 +21,8 @@
   padding: 5px;
   border: 1px solid $grey;
   box-shadow: var(--shadow-elevation-low);
+
+  &::selection, .hint::selection {
+    background: none;
+  }
 }

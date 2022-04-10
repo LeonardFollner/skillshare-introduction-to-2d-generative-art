@@ -21,6 +21,10 @@ import ColorsRGB from "./Slides/ColorsRGB";
 import ColorsHSL from "./Slides/ColorsHSL";
 import ColorSchemes from "./Slides/ColorSchemes";
 import ColorPalettes from "./Slides/ColorPalettes";
+import ShapesColors from "./Slides/ShapesColors";
+import CircleColor from "./Slides/CircleColor";
+import Bugs from "./Slides/Bugs";
+import RecursionColor from "./Slides/RecursionColor";
 
 function App() {
   useEffect(() => {
@@ -150,6 +154,26 @@ function App() {
           slide
       >
           <ColorPalettes/>
+      </Slide>
+      <Slide
+          id="shapes-colors"
+      >
+          <ShapesColors/>
+      </Slide>
+      <Slide
+          id="circle-colors"
+      >
+          <CircleColor/>
+      </Slide>
+      <Slide
+          id="bugs"
+      >
+          <Bugs/>
+      </Slide>
+      <Slide
+          id="recursion-colored"
+      >
+          <RecursionColor/>
       </Slide>
     </Impress>
   );
