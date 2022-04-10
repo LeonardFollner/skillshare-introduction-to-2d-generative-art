@@ -29,6 +29,15 @@ import Noise from "./Slides/Noise";
 import Images from "./Slides/Images";
 import Resources from "./Slides/Resources";
 import Workflow from "./Slides/Workflow";
+import PictureFrame from "./PictureFrame";
+import tylerxhobbs from "./Slides/images/tyler-hobbs-fidenza-612.png";
+import manoloide01 from "./Slides/images/manoloide_taun_01.png";
+import manoloide02 from "./Slides/images/manoloide_taun_02.png";
+import manoloide03 from "./Slides/images/manoloide_taun_03.png";
+import manoloide04 from "./Slides/images/manoloide_taun_04.png";
+import mattdesl01 from "./Slides/images/mattdesl_reflect_01.png";
+import mattdesl02 from "./Slides/images/mattdesl_reflect_02.png";
+import kgolid from "./Slides/images/kgolid_iterationI.png";
 
 function App() {
   useEffect(() => {
@@ -52,6 +61,53 @@ function App() {
               <h1>Generative (2D) Art</h1>
               <p>A workshop <em>heavily</em> inspired by Tim Holman‘s great <a href="https://youtu.be/4Se0_w0ISYk">»Generative Art Speedrun«</a></p>
               <p>Find the active source code right next to the <code>&lt;canvas&gt;</code> in the page's source.</p>
+          </div>
+      </Slide>
+      <Slide
+          id="tylerxhobbs"
+          x={4 * slideWidth}
+          relY={35.5}
+      >
+          <PictureFrame
+              images={[tylerxhobbs]}
+              label={"Tyler Hobbs: Fidenza – 612"}
+          />
+      </Slide>
+      <Slide
+          id="kgolid"
+          relX={slideWidth}
+          relY={0}
+      >
+          <PictureFrame
+              images={[kgolid]}
+              label={"Kjetil Golid: Iterations – 01"}
+          />
+      </Slide>
+      <Slide
+          id="mattdesl"
+      >
+          <PictureFrame
+              images={[mattdesl02, mattdesl01]}
+              label={"Matt DesLauriers: reflect"}
+          />
+      </Slide>
+      <Slide
+          id="manoloide"
+      >
+          <PictureFrame
+              images={[manoloide01, manoloide02, manoloide03, manoloide04]}
+              label={"Manolo Gamboa Naon: taun"}
+          />
+      </Slide>
+      <Slide
+          id="definition"
+          relX={slideWidth*1.1}
+          slide
+          hide
+      >
+          <div style={{display: "flex", justifyContent: "center", height: "100%", flexDirection: "column", paddingLeft: "70px", paddingRight: "330px"}}>
+              generative art
+              <h1>making machines that make art</h1>
           </div>
       </Slide>
       <Slide
