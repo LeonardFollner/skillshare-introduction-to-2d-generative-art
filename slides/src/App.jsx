@@ -53,11 +53,11 @@ function App() {
     <Impress>
       <Slide
           id="start"
-          x={2.15*slideWidth}
-          y={-slideWidth}
-          scale={5}
+          x={2.1*slideWidth}
+          y={-1.2*slideWidth}
+          scale={4}
       >
-          <div style={{width: slideWidth}}>
+          <div style={{width: 1.2*slideWidth}}>
               <h1>Generative (2D) Art</h1>
               <p>A workshop <em>heavily</em> inspired by Tim Holman‘s great <a href="https://youtu.be/4Se0_w0ISYk">»Generative Art Speedrun«</a></p>
               <p>Find the active source code right next to the <code>&lt;canvas&gt;</code> in the page's source.</p>
@@ -65,7 +65,7 @@ function App() {
       </Slide>
       <Slide
           id="tylerxhobbs"
-          x={4 * slideWidth}
+          x={4.5 * slideWidth}
           relY={35.5}
       >
           <PictureFrame
@@ -255,9 +255,9 @@ function App() {
       </Slide>
       <Slide
           id="overview"
-          scale="5"
+          scale="6"
           x={2000}
-          y={1000}
+          y={800}
       />
       <Slide
           id="workflow"
@@ -276,9 +276,9 @@ function App() {
       </Slide>
       <Slide
             id="end"
-            scale="5"
+            scale="6"
             x={2000}
-            y={1000}
+            y={800}
       />
     </Impress>
   );
