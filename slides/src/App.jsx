@@ -28,6 +28,7 @@ import RecursionColor from "./Slides/RecursionColor";
 import Noise from "./Slides/Noise";
 import Images from "./Slides/Images";
 import Resources from "./Slides/Resources";
+import Workflow from "./Slides/Workflow";
 
 function App() {
   useEffect(() => {
@@ -209,11 +210,17 @@ function App() {
           y={1000}
       />
       <Slide
-          id="resources"
+          id="workflow"
           x={0}
           y={4*slideWidth}
           slide
-          hide
+      >
+          <Workflow/>
+      </Slide>
+      <Slide
+          id="resources"
+          relX={1024 * 1.1}
+          slide
       >
           <Resources/>
       </Slide>

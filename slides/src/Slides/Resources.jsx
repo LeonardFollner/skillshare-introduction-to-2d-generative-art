@@ -12,6 +12,8 @@ const Resources = () => {
                         <li>Anders Hoff: <a href="https://twitter.com/inconvergent" target="_blank">@inconvergent</a></li>
                         <li>Manolo Gamboa Naon: <a href="https://twitter.com/manoloidee" target="_blank">@manoloide</a></li>
                         <li>Tyler Hobbs: <a href="https://twitter.com/tylerxhobbs" target="_blank">@tylerxhobbs</a></li>
+                        <li><a href="http://www.veramolnar.com/" target="_blank">Vera Molnár</a></li>
+                        <li>Sol LeWitt</li>
                     </ul>
 
                     <h2>Tools</h2>
@@ -28,6 +30,7 @@ const Resources = () => {
                     <ul>
                         <li><a href="https://generativeartistry.com/" target="_blank">Generative Artistry</a></li>
                         <li><a href="https://inconvergent.net/generative/" target="_blank">inconvergent</a></li>
+                        <li><a href="https://thecodingtrain.com/" target="_blank">The Coding Train</a></li>
                     </ul>
 
                     <h2>Blogs</h2>
