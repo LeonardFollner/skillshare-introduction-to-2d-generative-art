@@ -1,6 +1,6 @@
 import React from "react";
-import PictureFrame from "../PictureFrame";
 import {replaceHelperFunctionComments} from "../helper";
+import CanvasFrame from "../CanvasFrame";
 
 const Shapes = () => {
     const drawTriangle = (context, x, y, size) => {
@@ -125,11 +125,11 @@ const Shapes = () => {
     const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
 
     return (
-        <PictureFrame
+        <CanvasFrame
             steps={stepsWithHelperFunctionsInlined}
             title="Shapes + Tiling"
         >
-        </PictureFrame>
+        </CanvasFrame>
     );
 }
 

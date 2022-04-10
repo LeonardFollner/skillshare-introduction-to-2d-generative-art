@@ -1,6 +1,6 @@
 import React from "react";
-import PictureFrame from "../PictureFrame";
 import {replaceHelperFunctionComments} from "../helper";
+import CanvasFrame from "../CanvasFrame";
 
 const Circle = () => {
     const generateCircle = (r, angleStep) => {
@@ -72,11 +72,11 @@ const Circle = () => {
     const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
 
     return (
-        <PictureFrame
+        <CanvasFrame
             steps={stepsWithHelperFunctionsInlined}
             title="Repetition + Displacement"
         >
-        </PictureFrame>
+        </CanvasFrame>
     );
 }
 

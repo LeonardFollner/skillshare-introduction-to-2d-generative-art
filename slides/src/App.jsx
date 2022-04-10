@@ -26,6 +26,7 @@ import CircleColor from "./Slides/CircleColor";
 import Bugs from "./Slides/Bugs";
 import RecursionColor from "./Slides/RecursionColor";
 import Noise from "./Slides/Noise";
+import Images from "./Slides/Images";
 
 function App() {
   useEffect(() => {
@@ -180,6 +181,11 @@ function App() {
           id="noise"
       >
           <Noise/>
+      </Slide>
+      <Slide
+          id="images"
+      >
+          <Images/>
       </Slide>
     </Impress>
   );

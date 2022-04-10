@@ -1,6 +1,6 @@
 import React from "react";
-import PictureFrame from "../PictureFrame";
 import {replaceHelperFunctionComments} from "../helper";
+import CanvasFrame from "../CanvasFrame";
 
 const RecursionColor = () => {
     const drawCircle = (context, cx, cy, r, n) => {
@@ -65,11 +65,11 @@ const RecursionColor = () => {
     const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
 
     return (
-        <PictureFrame
+        <CanvasFrame
             steps={stepsWithHelperFunctionsInlined}
             title="Recursion + Color"
         >
-        </PictureFrame>
+        </CanvasFrame>
     );
 }
 

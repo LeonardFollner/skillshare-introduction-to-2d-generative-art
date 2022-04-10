@@ -1,6 +1,6 @@
 import React from "react";
-import PictureFrame from "../PictureFrame";
 import {replaceHelperFunctionComments} from "../helper";
+import CanvasFrame from "../CanvasFrame";
 
 const TilingVertical = () => {
     const drawVerticalTile = (context, x, y, width, height) => {
@@ -85,11 +85,11 @@ const TilingVertical = () => {
     const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
 
     return (
-        <PictureFrame
+        <CanvasFrame
             steps={stepsWithHelperFunctionsInlined}
             title="Tiling [vertical]"
         >
-        </PictureFrame>
+        </CanvasFrame>
     );
 }
 

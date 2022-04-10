@@ -1,6 +1,6 @@
 import React from "react";
-import PictureFrame from "../PictureFrame";
 import {replaceHelperFunctionComments} from "../helper";
+import CanvasFrame from "../CanvasFrame";
 
 const Displacement = () => {
     const generateLines = (canvasWidth, canvasHeight) => {
@@ -56,11 +56,11 @@ const Displacement = () => {
     const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
 
     return (
-        <PictureFrame
+        <CanvasFrame
             steps={stepsWithHelperFunctionsInlined}
             title="Curves + Displacement"
         >
-        </PictureFrame>
+        </CanvasFrame>
     );
 }
 

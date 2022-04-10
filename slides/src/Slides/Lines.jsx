@@ -1,5 +1,5 @@
 import React from "react";
-import PictureFrame from "../PictureFrame";
+import CanvasFrame from "../CanvasFrame";
 
 const Lines = () => {
     const line = (context, canvasWidth, canvasHeight) => {
@@ -38,11 +38,11 @@ const Lines = () => {
     ];
 
     return (
-        <PictureFrame
+        <CanvasFrame
             steps={steps}
             title="Lines"
         >
-        </PictureFrame>
+        </CanvasFrame>
     );
 }
 
