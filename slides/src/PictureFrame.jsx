@@ -19,7 +19,7 @@ const PictureFrame = props => {
 
     return (
         <Frame label={label}>
-            <img src={image} height="600px" onClick={handleFrameClick}/>
+            <img src={image} height="500px" onClick={handleFrameClick}/>
         </Frame>
     )
 }
