@@ -27,6 +27,7 @@ import Bugs from "./Slides/Bugs";
 import RecursionColor from "./Slides/RecursionColor";
 import Noise from "./Slides/Noise";
 import Images from "./Slides/Images";
+import Resources from "./Slides/Resources";
 
 function App() {
   useEffect(() => {
@@ -42,7 +43,7 @@ function App() {
     <Impress>
       <Slide
           id="start"
-          x={2.5*slideWidth}
+          x={2.15*slideWidth}
           y={-slideWidth}
           scale={5}
       >
@@ -206,6 +207,21 @@ function App() {
           scale="5"
           x={2000}
           y={1000}
+      />
+      <Slide
+          id="resources"
+          x={0}
+          y={4*slideWidth}
+          slide
+          hide
+      >
+          <Resources/>
+      </Slide>
+      <Slide
+            id="end"
+            scale="5"
+            x={2000}
+            y={1000}
       />
     </Impress>
   );
