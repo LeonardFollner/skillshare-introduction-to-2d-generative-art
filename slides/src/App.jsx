@@ -74,17 +74,9 @@ function App() {
           />
       </Slide>
       <Slide
-          id="kgolid"
-          relX={slideWidth}
-          relY={0}
-      >
-          <PictureFrame
-              images={[kgolid]}
-              label={"Kjetil Golid: Iterations – 01"}
-          />
-      </Slide>
-      <Slide
           id="mattdesl"
+          relX={0.9*slideWidth}
+          relY={0}
       >
           <PictureFrame
               images={[mattdesl02, mattdesl01]}
@@ -93,6 +85,7 @@ function App() {
       </Slide>
       <Slide
           id="manoloide"
+          relX={0.9 * slideWidth}
       >
           <PictureFrame
               images={[manoloide01, manoloide02, manoloide03, manoloide04]}
@@ -256,6 +249,7 @@ function App() {
       </Slide>
       <Slide
           id="images"
+          relX={0.9*slideWidth}
       >
           <Images/>
       </Slide>
@@ -267,7 +261,7 @@ function App() {
       />
       <Slide
           id="workflow"
-          x={0}
+          x={200}
           y={4*slideWidth}
           slide
       >
