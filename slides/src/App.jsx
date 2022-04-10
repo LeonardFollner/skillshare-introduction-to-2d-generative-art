@@ -25,6 +25,7 @@ import ShapesColors from "./Slides/ShapesColors";
 import CircleColor from "./Slides/CircleColor";
 import Bugs from "./Slides/Bugs";
 import RecursionColor from "./Slides/RecursionColor";
+import Noise from "./Slides/Noise";
 
 function App() {
   useEffect(() => {
@@ -174,6 +175,11 @@ function App() {
           id="recursion-colored"
       >
           <RecursionColor/>
+      </Slide>
+      <Slide
+          id="noise"
+      >
+          <Noise/>
       </Slide>
     </Impress>
   );
