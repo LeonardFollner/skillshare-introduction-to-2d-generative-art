@@ -36,28 +36,33 @@ function App() {
     }
   });
 
+  const slideWidth = 900;
+
   return (
     <Impress>
       <Slide
-          id="first"
-          x={0}
-          y={0}
+          id="start"
+          x={2.5*slideWidth}
+          y={-slideWidth}
+          scale={5}
       >
-          <h1>First Slide</h1>
-      </Slide>
-      <Slide
-          id="source"
-          relX={900}
-      >
-          <code>Find the active source code right next to the &lt;canvas&gt; in the page's source.</code>
+          <div style={{width: slideWidth}}>
+              <h1>Generative (2D) Art</h1>
+              <p>A workshop <em>heavily</em> inspired by Tim Holman‘s great <a href="https://youtu.be/4Se0_w0ISYk">»Generative Art Speedrun«</a></p>
+              <p>Find the active source code right next to the <code>&lt;canvas&gt;</code> in the page's source.</p>
+          </div>
       </Slide>
       <Slide
           id="lines"
+          x={-slideWidth}
+          y={0}
+          hide
       >
         <Lines/>
       </Slide>
       <Slide
           id="tiling"
+          relX={slideWidth}
       >
         <Tiling/>
       </Slide>
@@ -88,11 +93,14 @@ function App() {
       </Slide>
       <Slide
           id="repetition"
+          x={0}
+          y={slideWidth}
       >
         <Repetition/>
       </Slide>
       <Slide
           id="displacement-repetition"
+          relX={slideWidth}
       >
         <DisplacementRepetition/>
       </Slide>
@@ -113,11 +121,14 @@ function App() {
       </Slide>
       <Slide
           id="recursion"
+          x={0}
+          y={2*slideWidth}
       >
         <Recursion/>
       </Slide>
       <Slide
           id="serpinski"
+          relX={slideWidth}
       >
         <Serpinki/>
       </Slide>
@@ -133,12 +144,15 @@ function App() {
       </Slide>
       <Slide
           id="colorsRGB"
+          x={-4*slideWidth}
+          y={3*slideWidth}
           hide
       >
         <ColorsRGB/>
       </Slide>
       <Slide
           id="colorsHSL"
+          relX={slideWidth}
           hide
       >
         <ColorsHSL/>
@@ -187,6 +201,12 @@ function App() {
       >
           <Images/>
       </Slide>
+      <Slide
+          id="overview"
+          scale="5"
+          x={2000}
+          y={1000}
+      />
     </Impress>
   );
 }
