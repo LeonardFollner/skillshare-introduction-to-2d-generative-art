@@ -29,4 +29,4 @@
 - [ ] disable next step on click, when clicking on slide to navigate towards it
 - [x] scale all canvases
 - [ ] QR-Code Link to slides
-- [ ] final task by Sol LeWitt
+- [x] final task by Sol LeWitt

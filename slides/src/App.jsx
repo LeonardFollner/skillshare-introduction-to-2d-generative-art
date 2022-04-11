@@ -276,6 +276,23 @@ function App() {
           <Resources/>
       </Slide>
       <Slide
+          id="solvingsol"
+          slide
+      >
+          <h1><a href="http://solvingsol.com/" target="_blank">solvingsol.com</a></h1>
+
+          <h2>Wall Drawing #87 (Sol LeWitt – 1971)</h2>
+          <p>
+              A square divided horizontally and vertically into four equal parts, each with lines and colors in four directions superimposed progressively.
+          </p>
+
+          <h2>Wall Drawing #118 (Sol LeWitt – 1971)</h2>
+          <p>On a wall surface, any continuous stretch of wall, using a hard pencil, place fifty points at random. The points should be evenly distributed over the area of the wall. All of the points should be connected by straight lines.</p>
+
+          <h2>Wall Drawing #766 (Sol LeWitt – 1994)</h2>
+          <p>Twenty-one isometric cubes of varying sizes, each with color ink washes superimposed.</p>
+      </Slide>
+      <Slide
             id="end"
             scale="6"
             x={2700}
