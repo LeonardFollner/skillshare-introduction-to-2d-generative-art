@@ -38,6 +38,7 @@ import manoloide04 from "./Slides/images/manoloide_taun_04.png";
 import mattdesl01 from "./Slides/images/mattdesl_reflect_01.png";
 import mattdesl02 from "./Slides/images/mattdesl_reflect_02.png";
 import kgolid from "./Slides/images/kgolid_iterationI.png";
+import qrCode from "./Slides/images/slides.svg";
 
 function App() {
   useEffect(() => {
@@ -291,6 +292,13 @@ function App() {
 
           <h2>Wall Drawing #766 (Sol LeWitt – 1994)</h2>
           <p>Twenty-one isometric cubes of varying sizes, each with color ink washes superimposed.</p>
+      </Slide>
+      <Slide
+          id="qr"
+      >
+          <PictureFrame
+              images={[qrCode]}
+              label={<a href={"https://leonardfollner.de/slides/generative-art"} target="_blank">leonardfollner.de/slides/generative-art</a>}/>
       </Slide>
       <Slide
             id="end"
