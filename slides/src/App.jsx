@@ -277,6 +277,19 @@ function App() {
           <Resources/>
       </Slide>
       <Slide
+          id="slides"
+      >
+          <PictureFrame
+              images={[qrCode]}
+              label={
+                  <>
+                      <a href={"https://leonardfollner.de/slides/generative-art"} target="_blank">leonardfollner.de/slides/generative-art</a>
+                      <br/>
+                      <a href="mailto:leonard.follner@icloud.com">leonard.follner@icloud.com</a>
+                  </>
+              }/>
+      </Slide>
+      <Slide
           id="solvingsol"
           slide
       >
@@ -292,13 +305,6 @@ function App() {
 
           <h2>Wall Drawing #766 (Sol LeWitt – 1994)</h2>
           <p>Twenty-one isometric cubes of varying sizes, each with color ink washes superimposed.</p>
-      </Slide>
-      <Slide
-          id="qr"
-      >
-          <PictureFrame
-              images={[qrCode]}
-              label={<a href={"https://leonardfollner.de/slides/generative-art"} target="_blank">leonardfollner.de/slides/generative-art</a>}/>
       </Slide>
       <Slide
             id="end"
