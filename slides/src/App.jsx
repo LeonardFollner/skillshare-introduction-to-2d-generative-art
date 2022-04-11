@@ -60,13 +60,14 @@ function App() {
           <div style={{width: 1.2*slideWidth}}>
               <h1>Generative (2D) Art</h1>
               <p>A workshop <em>heavily</em> inspired by Tim Holman’s great <a href="https://youtu.be/4Se0_w0ISYk">»Generative Art Speedrun«</a></p>
+              <p>Click on the canvases for the next drawing step or for a redraw.</p>
               <p>Find the active source code right next to the <code>&lt;canvas&gt;</code> in the page's source.</p>
           </div>
       </Slide>
       <Slide
           id="tylerxhobbs"
           x={4.5 * slideWidth}
-          relY={35.5}
+          relY={100}
       >
           <PictureFrame
               images={[tylerxhobbs]}
@@ -278,7 +279,7 @@ function App() {
             id="end"
             scale="6"
             x={2700}
-            y={1300}
+            y={1250}
       />
     </Impress>
   );
