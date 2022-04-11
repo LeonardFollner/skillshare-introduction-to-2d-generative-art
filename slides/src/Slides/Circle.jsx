@@ -61,12 +61,26 @@ const Circle = () => {
         const cy = canvasHeight / 2;
 
         let points = generateCircle(canvasWidth / 7, 10);
+        drawCircle(context, points, cx, cy, 500);
+    };
 
-        window.requestAnimationFrame(drawCircle.bind(null, context, points, cx, cy, 0));
+    const tree = (context, canvasWidth, canvasHeight) => {
+        //${generateCircle}
+        //${polarToCartesian}
+        //${drawCircle}
+        //${jitterCircle}
+
+        const cx = canvasWidth / 2;
+        const cy = canvasHeight / 2;
+
+        let points = generateCircle(canvasWidth / 7, 10);
+
+        drawCircle(context, points, cx, cy, 0);
     };
 
     const steps = [
         circle,
+        tree,
     ];
 
     const helperFunctions = {generateCircle, polarToCartesian, drawCircle, jitterCircle};
