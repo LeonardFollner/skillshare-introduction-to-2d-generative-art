@@ -1,7 +1,6 @@
 # Generative Art Workshop
 
 - Was ist Generative Art
-    - Beispiel-Algorithmus
     - Definition Matt
 - Beispiele
     - krasse
@@ -29,3 +28,5 @@
 ## Todos
 - [ ] disable next step on click, when clicking on slide to navigate towards it
 - [x] scale all canvases
+- [ ] QR-Code Link to slides
+- [ ] final task by Sol LeWitt
