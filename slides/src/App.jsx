@@ -278,7 +278,7 @@ function App() {
             id="end"
             scale="6"
             x={2700}
-            y={800}
+            y={1300}
       />
     </Impress>
   );
