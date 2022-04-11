@@ -3,7 +3,7 @@ import React from 'react';
 const Workflow = () => {
     return (
         <>
-            <h1><a href="https://youtu.be/8Uo6zFwSO78" target="_blank">Matt DesLauriers‘ Workflow</a></h1>
+            <h1><a href="https://youtu.be/8Uo6zFwSO78" target="_blank">Matt DesLauriers’ Workflow</a></h1>
             <ol>
                 <li>mood & style</li>
                 <li>sketching & thumbnails</li>
