@@ -256,7 +256,7 @@ function App() {
       <Slide
           id="overview"
           scale="6"
-          x={2000}
+          x={2700}
           y={800}
       />
       <Slide
@@ -277,7 +277,7 @@ function App() {
       <Slide
             id="end"
             scale="6"
-            x={2000}
+            x={2700}
             y={800}
       />
     </Impress>
