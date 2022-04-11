@@ -17,7 +17,9 @@ const Circle = () => {
         return {x, y};
     };
 
-    const drawCircle = (context, points, cx, cy) => {
+    const drawCircle = (context, points, cx, cy, generation) => {
+        points = jitterCircle(points);
+
         context.strokeStyle = "rgba(0, 0, 0, 0.2)";
 
         context.beginPath();
@@ -35,6 +37,10 @@ const Circle = () => {
         const lastPointCartesian = polarToCartesian(points[0].r, points[0].angle);
         context.quadraticCurveTo(pointCartesian.x + cx, pointCartesian.y + cy, lastPointCartesian.x + cx, lastPointCartesian.y + cy);
         context.stroke();
+
+        if (generation < 500) {
+            window.requestAnimationFrame(drawCircle.bind(null, context, points, cx, cy, generation + 1));
+        }
     };
 
     const jitterCircle = (points) => {
@@ -55,12 +61,8 @@ const Circle = () => {
         const cy = canvasHeight / 2;
 
         let points = generateCircle(canvasWidth / 7, 10);
-        drawCircle(context, points, cx, cy);
 
-        for (let i = 0; i < 500; i++) {
-            points = jitterCircle(points);
-            drawCircle(context, points, cx, cy);
-        }
+        window.requestAnimationFrame(drawCircle.bind(null, context, points, cx, cy, 0));
     };
 
     const steps = [
