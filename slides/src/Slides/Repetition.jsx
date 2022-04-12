@@ -17,7 +17,7 @@ const Repetition = () => {
         context.stroke();
     };
 
-    const step = (context, canvasWidth, canvasHeight) => {
+    const step = (context, canvasWidth, canvasHeight, steps, color) => {
         let line = [];
         const margin = 20;
         const maxJitter = 12;
@@ -27,26 +27,53 @@ const Repetition = () => {
         }
 
         // so the line is drawn at least once
-        drawLine(context, line, "$color");
+        drawLine(context, line, color);
 
-        for (let i = 0; i < "$steps"; i++) {
+        for (let i = 0; i < steps; i++) {
             line = line.map(point => ({
                 x: point.x,
                 y: point.y + Math.random() * maxJitter - maxJitter/2,
             }));
-            drawLine(context, line, "$color");
+            drawLine(context, line, color);
         }
     };
 
-    // avoid repetition and still be able to hand over strings with correct values in place
+    const step0 = (context, canvasWidth, canvasHeight) => {
+        step(context, canvasWidth, canvasHeight, 0, "black");
+    }
+
+    const step1 = (context, canvasWidth, canvasHeight) => {
+        step(context, canvasWidth, canvasHeight, 1, "black");
+    }
+
+    const step2 = (context, canvasWidth, canvasHeight) => {
+        step(context, canvasWidth, canvasHeight, 2, "black");
+    }
+
+    const step3 = (context, canvasWidth, canvasHeight) => {
+        step(context, canvasWidth, canvasHeight, 3, "black");
+    }
+
+    const step10 = (context, canvasWidth, canvasHeight) => {
+        step(context, canvasWidth, canvasHeight, 10, "black");
+    }
+
+    const step100 = (context, canvasWidth, canvasHeight) => {
+        step(context, canvasWidth, canvasHeight, 100, "rgba(0, 0, 0, 0.4)");
+    }
+
+    const step1500 = (context, canvasWidth, canvasHeight) => {
+        step(context, canvasWidth, canvasHeight, 1500, "rgba(0, 0, 0, 0.15)");
+    }
+
     const steps = [
-        eval(step.toString().replaceAll("$steps", 0).replaceAll("$color", "black")),
-        eval(step.toString().replaceAll("$steps", 1).replaceAll("$color", "black")),
-        eval(step.toString().replaceAll("$steps", 2).replaceAll("$color", "black")),
-        eval(step.toString().replaceAll("$steps", 3).replaceAll("$color", "black")),
-        eval(step.toString().replaceAll("$steps", 10).replaceAll("$color", "black")),
-        eval(step.toString().replaceAll("$steps", 100).replaceAll("$color", "rgba(0, 0, 0, 0.4)")),
-        eval(step.toString().replaceAll("$steps", 1500).replaceAll("$color", "rgba(0, 0, 0, 0.15)")),
+        step0,
+        step1,
+        step2,
+        step3,
+        step10,
+        step100,
+        step1500,
     ];
 
     return (
