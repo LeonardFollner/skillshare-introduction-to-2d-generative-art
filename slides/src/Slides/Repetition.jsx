@@ -1,5 +1,4 @@
 import React from "react";
-import {replaceHelperFunctionComments} from "../helper";
 import CanvasFrame from "../CanvasFrame";
 
 const Repetition = () => {
@@ -19,8 +18,6 @@ const Repetition = () => {
     };
 
     const step = (context, canvasWidth, canvasHeight) => {
-        //${drawLine}
-
         let line = [];
         const margin = 20;
         const maxJitter = 12;
@@ -43,22 +40,18 @@ const Repetition = () => {
 
     // avoid repetition and still be able to hand over strings with correct values in place
     const steps = [
-        step.toString().replaceAll("$steps", 0).replaceAll("$color", "black"),
-        step.toString().replaceAll("$steps", 1).replaceAll("$color", "black"),
-        step.toString().replaceAll("$steps", 2).replaceAll("$color", "black"),
-        step.toString().replaceAll("$steps", 3).replaceAll("$color", "black"),
-        step.toString().replaceAll("$steps", 10).replaceAll("$color", "black"),
-        step.toString().replaceAll("$steps", 100).replaceAll("$color", "rgba(0, 0, 0, 0.4)"),
-        step.toString().replaceAll("$steps", 1500).replaceAll("$color", "rgba(0, 0, 0, 0.15)"),
+        eval(step.toString().replaceAll("$steps", 0).replaceAll("$color", "black")),
+        eval(step.toString().replaceAll("$steps", 1).replaceAll("$color", "black")),
+        eval(step.toString().replaceAll("$steps", 2).replaceAll("$color", "black")),
+        eval(step.toString().replaceAll("$steps", 3).replaceAll("$color", "black")),
+        eval(step.toString().replaceAll("$steps", 10).replaceAll("$color", "black")),
+        eval(step.toString().replaceAll("$steps", 100).replaceAll("$color", "rgba(0, 0, 0, 0.4)")),
+        eval(step.toString().replaceAll("$steps", 1500).replaceAll("$color", "rgba(0, 0, 0, 0.15)")),
     ];
-
-    const helperFunctions = {drawLine};
-
-    const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
 
     return (
         <CanvasFrame
-            steps={stepsWithHelperFunctionsInlined}
+            steps={steps}
             title="Repetition"
         >
         </CanvasFrame>

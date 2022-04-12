@@ -1,5 +1,4 @@
 import React from "react";
-import {replaceHelperFunctionComments} from "../helper";
 import CanvasFrame from "../CanvasFrame";
 
 const ColorsHSL = () => {
@@ -23,13 +22,9 @@ const ColorsHSL = () => {
         hsl,
     ];
 
-    const helperFunctions = {};
-
-    const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
-
     return (
         <CanvasFrame
-            steps={stepsWithHelperFunctionsInlined}
+            steps={steps}
             title="Colors [HSL]"
         >
         </CanvasFrame>

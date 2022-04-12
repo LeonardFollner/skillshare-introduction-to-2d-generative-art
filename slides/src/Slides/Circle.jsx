@@ -1,5 +1,4 @@
 import React from "react";
-import {replaceHelperFunctionComments} from "../helper";
 import CanvasFrame from "../CanvasFrame";
 
 const Circle = () => {
@@ -52,11 +51,6 @@ const Circle = () => {
     };
 
     const circle = (context, canvasWidth, canvasHeight) => {
-        //${generateCircle}
-        //${polarToCartesian}
-        //${drawCircle}
-        //${jitterCircle}
-
         const cx = canvasWidth / 2;
         const cy = canvasHeight / 2;
 
@@ -65,11 +59,6 @@ const Circle = () => {
     };
 
     const tree = (context, canvasWidth, canvasHeight) => {
-        //${generateCircle}
-        //${polarToCartesian}
-        //${drawCircle}
-        //${jitterCircle}
-
         const cx = canvasWidth / 2;
         const cy = canvasHeight / 2;
 
@@ -83,13 +72,9 @@ const Circle = () => {
         tree,
     ];
 
-    const helperFunctions = {generateCircle, polarToCartesian, drawCircle, jitterCircle};
-
-    const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
-
     return (
         <CanvasFrame
-            steps={stepsWithHelperFunctionsInlined}
+            steps={steps}
             title="Repetition + Displacement"
         >
         </CanvasFrame>

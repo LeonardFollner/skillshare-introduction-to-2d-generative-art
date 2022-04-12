@@ -1,5 +1,4 @@
 import React from "react";
-import {replaceHelperFunctionComments} from "../helper";
 import CanvasFrame from "../CanvasFrame";
 
 const TilingVertical = () => {
@@ -18,8 +17,6 @@ const TilingVertical = () => {
     };
 
     const tilingVertical250 = (context, canvasWidth, canvasHeight) => {
-        //${drawVerticalTile}
-
         const stepSize = 250;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -29,8 +26,6 @@ const TilingVertical = () => {
     };
 
     const tilingVertical100 = (context, canvasWidth, canvasHeight) => {
-        //${drawVerticalTile}
-
         const stepSize = 100;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -40,8 +35,6 @@ const TilingVertical = () => {
     };
 
     const tilingVertical50 = (context, canvasWidth, canvasHeight) => {
-        //${drawVerticalTile}
-
         const stepSize = 50;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -51,8 +44,6 @@ const TilingVertical = () => {
     };
 
     const tilingVertical20 = (context, canvasWidth, canvasHeight) => {
-        //${drawVerticalTile}
-
         const stepSize = 20;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -62,8 +53,6 @@ const TilingVertical = () => {
     };
 
     const tilingVertical10 = (context, canvasWidth, canvasHeight) => {
-        //${drawVerticalTile}
-
         const stepSize = 10;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -71,8 +60,6 @@ const TilingVertical = () => {
             }
         }
     };
-
-    const helperFunctions = {drawVerticalTile};
 
     const steps = [
         tilingVertical250,
@@ -82,11 +69,9 @@ const TilingVertical = () => {
         tilingVertical10,
     ];
 
-    const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
-
     return (
         <CanvasFrame
-            steps={stepsWithHelperFunctionsInlined}
+            steps={steps}
             title="Tiling [vertical]"
         >
         </CanvasFrame>

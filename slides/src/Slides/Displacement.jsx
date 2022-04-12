@@ -1,5 +1,4 @@
 import React from "react";
-import {replaceHelperFunctionComments} from "../helper";
 import CanvasFrame from "../CanvasFrame";
 
 const Displacement = () => {
@@ -29,10 +28,6 @@ const Displacement = () => {
 
     // point grid
     const step0 = (context, canvasWidth, canvasHeight) => {
-        //${stepX}
-        //${stepY}
-        //${drawPoints}
-
         const margin = 50;
         const lines = [];
         for (let y = margin; y <= canvasHeight - margin; y += stepY) {
@@ -48,11 +43,6 @@ const Displacement = () => {
 
     // connected point grid
     const step1 = (context, canvasWidth, canvasHeight) => {
-        //${stepX}
-        //${stepY}
-        //${drawPoints}
-        //${drawLines}
-
         const margin = 50;
         const lines = [];
         for (let y = margin; y <= canvasHeight - margin; y += stepY) {
@@ -69,11 +59,6 @@ const Displacement = () => {
 
     // jittered point grid
     const step2 = (context, canvasWidth, canvasHeight) => {
-        //${stepX}
-        //${stepY}
-        //${drawPoints}
-        //${drawLines}
-
         const margin = 50;
         const lines = [];
         const jitter = 20;
@@ -94,10 +79,6 @@ const Displacement = () => {
 
     // jittered lines
     const step3 = (context, canvasWidth, canvasHeight) => {
-        //${stepX}
-        //${stepY}
-        //${drawLines}
-
         const margin = 50;
         const lines = [];
         const jitter = 20;
@@ -117,10 +98,6 @@ const Displacement = () => {
 
     // jitter based on location
     const step4 = (context, canvasWidth, canvasHeight) => {
-        //${stepX}
-        //${stepY}
-        //${drawLines}
-
         const margin = 50;
         const lines = [];
         const jitter = 10;
@@ -142,10 +119,7 @@ const Displacement = () => {
 
     // double the number of lines
     const step5 = (context, canvasWidth, canvasHeight) => {
-        //${stepX}
         const stepY = 10;
-        //${drawLines}
-
         const margin = 50;
         const lines = [];
         const jitter = 10;
@@ -174,13 +148,9 @@ const Displacement = () => {
         step5,
     ];
 
-    const helperFunctions = {drawPoints, drawLines, stepX, stepY};
-
-    const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
-
     return (
         <CanvasFrame
-            steps={stepsWithHelperFunctionsInlined}
+            steps={steps}
             title="Displacement"
         >
         </CanvasFrame>

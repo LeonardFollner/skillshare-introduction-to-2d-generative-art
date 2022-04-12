@@ -1,5 +1,4 @@
 import React from "react";
-import {replaceHelperFunctionComments} from "../helper";
 import CanvasFrame from "../CanvasFrame";
 
 const Curves = () => {
@@ -26,8 +25,6 @@ const Curves = () => {
     };
 
     const curves500 = (context, canvasWidth, canvasHeight) => {
-        //${drawTile}
-
         const stepSize = 500;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -37,8 +34,6 @@ const Curves = () => {
     };
 
     const curves250 = (context, canvasWidth, canvasHeight) => {
-        //${drawTile}
-
         const stepSize = 250;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -48,8 +43,6 @@ const Curves = () => {
     };
 
     const curves100 = (context, canvasWidth, canvasHeight) => {
-        //${drawTile}
-
         const stepSize = 100;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -59,8 +52,6 @@ const Curves = () => {
     };
 
     const curves50 = (context, canvasWidth, canvasHeight) => {
-        //${drawTile}
-
         const stepSize = 50;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -70,8 +61,6 @@ const Curves = () => {
     };
 
     const curves20 = (context, canvasWidth, canvasHeight) => {
-        //${drawTile}
-
         const stepSize = 20;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -88,13 +77,9 @@ const Curves = () => {
         curves20,
     ];
 
-    const helperFunctions = {drawTile};
-
-    const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
-
     return (
         <CanvasFrame
-            steps={stepsWithHelperFunctionsInlined}
+            steps={steps}
             title="Curves + Tiling"
         >
         </CanvasFrame>

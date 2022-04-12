@@ -1,5 +1,4 @@
 import React from "react";
-import {replaceHelperFunctionComments} from "../helper";
 import CanvasFrame from "../CanvasFrame";
 
 const Shapes = () => {
@@ -70,12 +69,6 @@ const Shapes = () => {
     };
 
     const shapes250 = (context, canvasWidth, canvasHeight) => {
-        //${drawTriangle}
-        //${drawSquare}
-        //${drawCircle}
-        //${drawTwoSquares}
-        //${drawTile}
-
         const stepSize = 250;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -85,12 +78,6 @@ const Shapes = () => {
     };
 
     const shapes100 = (context, canvasWidth, canvasHeight) => {
-        //${drawTriangle}
-        //${drawSquare}
-        //${drawCircle}
-        //${drawTwoSquares}
-        //${drawTile}
-
         const stepSize = 100;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -100,12 +87,6 @@ const Shapes = () => {
     };
 
     const shapes50 = (context, canvasWidth, canvasHeight) => {
-        //${drawTriangle}
-        //${drawSquare}
-        //${drawCircle}
-        //${drawTwoSquares}
-        //${drawTile}
-
         const stepSize = 50;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -120,13 +101,9 @@ const Shapes = () => {
         // shapes50,
     ];
 
-    const helperFunctions = {drawTile, drawTriangle, drawSquare, drawCircle, drawTwoSquares};
-
-    const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
-
     return (
         <CanvasFrame
-            steps={stepsWithHelperFunctionsInlined}
+            steps={steps}
             title="Shapes + Tiling"
         >
         </CanvasFrame>

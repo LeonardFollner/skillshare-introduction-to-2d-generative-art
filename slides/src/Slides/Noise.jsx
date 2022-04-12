@@ -1,5 +1,4 @@
 import React from "react";
-import {replaceHelperFunctionComments} from "../helper";
 import {random} from "canvas-sketch-util";
 import CanvasFrame from "../CanvasFrame";
 
@@ -80,10 +79,6 @@ const Noise = () => {
         flowField,
         colorField,
     ];
-
-    const helperFunctions = {};
-
-    const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
 
     return (
         <CanvasFrame

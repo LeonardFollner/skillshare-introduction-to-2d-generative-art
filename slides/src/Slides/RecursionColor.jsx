@@ -1,5 +1,4 @@
 import React from "react";
-import {replaceHelperFunctionComments} from "../helper";
 import CanvasFrame from "../CanvasFrame";
 
 const RecursionColor = () => {
@@ -23,32 +22,22 @@ const RecursionColor = () => {
     };
 
     const recursion1 = (context, canvasWidth, canvasHeight) => {
-        //${drawCircle}
-
         drawCircle(context, canvasWidth/2, canvasHeight/2, canvasHeight/2, 1);
     };
 
     const recursion2 = (context, canvasWidth, canvasHeight) => {
-        //${drawCircle}
-
         drawCircle(context, canvasWidth/2, canvasHeight/2, canvasHeight/2, 2);
     };
 
     const recursion3 = (context, canvasWidth, canvasHeight) => {
-        //${drawCircle}
-
         drawCircle(context, canvasWidth/2, canvasHeight/2, canvasHeight/2, 3);
     };
 
     const recursion4 = (context, canvasWidth, canvasHeight) => {
-        //${drawCircle}
-
         drawCircle(context, canvasWidth/2, canvasHeight/2, canvasHeight/2, 4);
     };
 
     const recursion5 = (context, canvasWidth, canvasHeight) => {
-        //${drawCircle}
-
         drawCircle(context, canvasWidth/2, canvasHeight/2, canvasHeight/2, 5);
     };
 
@@ -60,13 +49,9 @@ const RecursionColor = () => {
         recursion5,
     ];
 
-    const helperFunctions = {drawCircle};
-
-    const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
-
     return (
         <CanvasFrame
-            steps={stepsWithHelperFunctionsInlined}
+            steps={steps}
             title="Recursion + Color"
         >
         </CanvasFrame>

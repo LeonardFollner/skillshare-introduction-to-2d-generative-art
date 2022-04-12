@@ -1,5 +1,4 @@
 import React from "react";
-import {replaceHelperFunctionComments} from "../helper";
 import CanvasFrame from "../CanvasFrame";
 
 const Tree = () => {
@@ -50,9 +49,6 @@ const Tree = () => {
     };
 
     const recursion = (context, canvasWidth, canvasHeight) => {
-        //${drawBranches}
-        //${lerp}
-
         const length = 40;
         for (let a = 0; a < 360; a+=3) {
             context.save();
@@ -67,13 +63,9 @@ const Tree = () => {
         recursion,
     ];
 
-    const helperFunctions = {drawBranches, lerp};
-
-    const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
-
     return (
         <CanvasFrame
-            steps={stepsWithHelperFunctionsInlined}
+            steps={steps}
             title="Iris"
         >
         </CanvasFrame>

@@ -96,8 +96,6 @@ const CanvasFrame = (props) => {
                     onClick={handleCanvasClick}
                 />
             </Frame>
-            <script dangerouslySetInnerHTML={{__html: step}}>
-            </script>
         </>
     )
 };

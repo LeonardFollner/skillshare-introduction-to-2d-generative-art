@@ -1,5 +1,4 @@
 import React from "react";
-import {replaceHelperFunctionComments} from "../helper";
 import CanvasFrame from "../CanvasFrame";
 
 const CircleColor = () => {
@@ -61,11 +60,6 @@ const CircleColor = () => {
     };
 
     const circle1 = (context, canvasWidth, canvasHeight) => {
-        //${generatePointsOnCircle}
-        //${drawCircle}
-        //${jitterCircle}
-        //${draw}
-
         let points = generatePointsOnCircle(0, canvasHeight/4,canvasWidth / 8, 36);
 
         context.save();
@@ -73,11 +67,6 @@ const CircleColor = () => {
     };
 
     const circle2 = (context, canvasWidth, canvasHeight) => {
-        //${generatePointsOnCircle}
-        //${drawCircle}
-        //${jitterCircle}
-        //${draw}
-
         let points = generatePointsOnCircle(0, canvasHeight/2,canvasWidth / 8, 36);
 
         context.save();
@@ -85,11 +74,6 @@ const CircleColor = () => {
     };
 
     const circle3 = (context, canvasWidth, canvasHeight) => {
-        //${generatePointsOnCircle}
-        //${drawCircle}
-        //${jitterCircle}
-        //${draw}
-
         let points = generatePointsOnCircle(0, canvasHeight*3/4,canvasWidth / 8, 36);
 
         context.save();
@@ -103,13 +87,9 @@ const CircleColor = () => {
         circle3,
     ];
 
-    const helperFunctions = {generatePointsOnCircle, drawCircle, jitterCircle, draw};
-
-    const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
-
     return (
         <CanvasFrame
-            steps={stepsWithHelperFunctionsInlined}
+            steps={steps}
             title="Tubes"
             dontClearCanvas
             dontRepeatLastStep

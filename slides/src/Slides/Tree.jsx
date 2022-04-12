@@ -1,5 +1,4 @@
 import React from "react";
-import {replaceHelperFunctionComments} from "../helper";
 import CanvasFrame from "../CanvasFrame";
 
 const Tree = () => {
@@ -50,9 +49,6 @@ const Tree = () => {
     };
 
     const recursion = (context, canvasWidth, canvasHeight) => {
-        //${drawBranches}
-        //${lerp}
-
         const length = 130;
         drawBranches(context, [{x: canvasWidth / 2, y: canvasHeight}, {x: canvasWidth / 2, y: canvasHeight - length}], 10, length);
     };
@@ -61,13 +57,9 @@ const Tree = () => {
         recursion,
     ];
 
-    const helperFunctions = {drawBranches, lerp};
-
-    const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
-
     return (
         <CanvasFrame
-            steps={stepsWithHelperFunctionsInlined}
+            steps={steps}
             title="Tree"
         >
         </CanvasFrame>

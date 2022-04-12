@@ -1,5 +1,4 @@
 import React from "react";
-import {replaceHelperFunctionComments} from "../helper";
 import CanvasFrame from "../CanvasFrame";
 
 const Tiling = () => {
@@ -18,8 +17,6 @@ const Tiling = () => {
     };
 
     const tiling250 = (context, canvasWidth, canvasHeight) => {
-        //${drawTile}
-
         const stepSize = 250;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -29,8 +26,6 @@ const Tiling = () => {
     };
 
     const tiling100 = (context, canvasWidth, canvasHeight) => {
-        //${drawTile}
-
         const stepSize = 100;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -40,8 +35,6 @@ const Tiling = () => {
     };
 
     const tiling50 = (context, canvasWidth, canvasHeight) => {
-        //${drawTile}
-
         const stepSize = 50;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -51,8 +44,6 @@ const Tiling = () => {
     };
 
     const tiling20 = (context, canvasWidth, canvasHeight) => {
-        //${drawTile}
-
         const stepSize = 20;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -61,8 +52,6 @@ const Tiling = () => {
         }
     };
 
-    const helperFunctions = {drawTile};
-
     const steps = [
         tiling250,
         tiling100,
@@ -70,11 +59,9 @@ const Tiling = () => {
         tiling20,
     ];
 
-    const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
-
     return (
         <CanvasFrame
-            steps={stepsWithHelperFunctionsInlined}
+            steps={steps}
             title="Tiling"
         >
         </CanvasFrame>

@@ -1,15 +1,4 @@
 import React from "react";
-import PictureFrame from "../PictureFrame";
-import {replaceHelperFunctionComments} from "../helper";
-import analogous from "./images/1 analogous.png";
-import monochromatic from "./images/2 monochromatic.png";
-import triad from "./images/3 triad.png";
-import complementary from "./images/4 complementary.png";
-import splitComplementary from "./images/5 split complementary.png";
-import doubleSplitComplementary from "./images/6 double split complementary.png";
-import square from "./images/7 square.png";
-import compound from "./images/8 compound.png";
-import shades from "./images/9 shades.png";
 
 const Palette = ({palette}) => {
     const width = Math.floor(100 / palette.length);

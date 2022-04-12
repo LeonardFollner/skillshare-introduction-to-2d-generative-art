@@ -1,5 +1,4 @@
 import React from "react";
-import {replaceHelperFunctionComments} from "../helper";
 import CanvasFrame from "../CanvasFrame";
 
 const Squares = () => {
@@ -26,9 +25,6 @@ const Squares = () => {
     };
 
     const squares = (context, canvasWidth, canvasHeight) => {
-        //${drawSquare}
-        //${drawTile}
-
         const stepSize = 30;
         const margin = 20;
         for (let y = margin; y < canvasHeight - margin - stepSize; y += stepSize) {
@@ -42,13 +38,9 @@ const Squares = () => {
         squares,
     ];
 
-    const helperFunctions = {drawTile, drawSquare};
-
-    const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
-
     return (
         <CanvasFrame
-            steps={stepsWithHelperFunctionsInlined}
+            steps={steps}
             title="Repetition"
         >
         </CanvasFrame>

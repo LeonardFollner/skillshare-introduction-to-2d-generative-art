@@ -62,7 +62,7 @@ function App() {
               <h1>Generative (2D) Art</h1>
               <p>A workshop <em>heavily</em> inspired by Tim Holman’s great <a href="https://youtu.be/4Se0_w0ISYk">»Generative Art Speedrun«</a></p>
               <p>Click on the canvases for the next drawing step or for a redraw.</p>
-              <p>Find the active source code right next to the <code>&lt;canvas&gt;</code> in the page's source.</p>
+              <p>Find the source code <a href="https://github.com/LeonardFollner/skillshare-introduction-to-2d-generative-art" target="_blank">here</a></p>
           </div>
       </Slide>
       <Slide

@@ -1,5 +1,4 @@
 import React from "react";
-import {replaceHelperFunctionComments} from "../helper";
 import CanvasFrame from "../CanvasFrame";
 
 const DisplacementRepetition = () => {
@@ -57,10 +56,6 @@ const DisplacementRepetition = () => {
 
     // double the number of lines
     const step0 = (context, canvasWidth, canvasHeight) => {
-        //${generateLines}
-        //${drawLines}
-        //${jitterLines}
-
         let lines = generateLines(canvasWidth, canvasHeight);
         drawLines(context, lines, "rgba(0, 0, 0, 0.2)");
 
@@ -74,13 +69,9 @@ const DisplacementRepetition = () => {
         step0,
     ];
 
-    const helperFunctions = {generateLines, drawLines, jitterLines};
-
-    const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
-
     return (
         <CanvasFrame
-            steps={stepsWithHelperFunctionsInlined}
+            steps={steps}
             title="Displacement + Repetition"
         >
         </CanvasFrame>

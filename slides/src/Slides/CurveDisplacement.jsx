@@ -1,5 +1,4 @@
 import React from "react";
-import {replaceHelperFunctionComments} from "../helper";
 import CanvasFrame from "../CanvasFrame";
 
 const Displacement = () => {
@@ -40,9 +39,6 @@ const Displacement = () => {
     };
 
     const step = (context, canvasWidth, canvasHeight) => {
-        //${drawLines}
-        //${generateLines}
-
         const lines = generateLines(canvasWidth, canvasHeight);
         drawLines(context, lines);
     };
@@ -51,13 +47,9 @@ const Displacement = () => {
         step,
     ];
 
-    const helperFunctions = {drawLines, generateLines};
-
-    const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
-
     return (
         <CanvasFrame
-            steps={stepsWithHelperFunctionsInlined}
+            steps={steps}
             title="Curves + Displacement"
         >
         </CanvasFrame>

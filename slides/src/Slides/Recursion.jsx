@@ -1,5 +1,4 @@
 import React from "react";
-import {replaceHelperFunctionComments} from "../helper";
 import CanvasFrame from "../CanvasFrame";
 
 const Recursion = () => {
@@ -34,10 +33,6 @@ const Recursion = () => {
     };
 
     const recursion = (context, canvasWidth, canvasHeight) => {
-        //${drawSquare}
-        //${drawTile}
-        //${lerp}
-
         const stepSize = 500;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -47,10 +42,6 @@ const Recursion = () => {
     };
 
     const recursion500 = (context, canvasWidth, canvasHeight) => {
-        //${drawSquare}
-        //${drawTile}
-        //${lerp}
-
         const stepSize = 500;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -60,10 +51,6 @@ const Recursion = () => {
     };
 
     const recursion250 = (context, canvasWidth, canvasHeight) => {
-        //${drawSquare}
-        //${drawTile}
-        //${lerp}
-
         const stepSize = 250;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -73,10 +60,6 @@ const Recursion = () => {
     };
 
     const recursion100 = (context, canvasWidth, canvasHeight) => {
-        //${drawSquare}
-        //${drawTile}
-        //${lerp}
-
         const stepSize = 100;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -86,10 +69,6 @@ const Recursion = () => {
     };
 
     const recursion50 = (context, canvasWidth, canvasHeight) => {
-        //${drawSquare}
-        //${drawTile}
-        //${lerp}
-
         const stepSize = 50;
         for (let y = 0; y < canvasHeight; y += stepSize) {
             for (let x = 0; x < canvasWidth; x += stepSize) {
@@ -106,13 +85,9 @@ const Recursion = () => {
         recursion50,
     ];
 
-    const helperFunctions = {drawTile, drawSquare, lerp};
-
-    const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
-
     return (
         <CanvasFrame
-            steps={stepsWithHelperFunctionsInlined}
+            steps={steps}
             title="Recursion"
         >
         </CanvasFrame>

@@ -75,7 +75,7 @@
     - making machines, that make art
 - fängt mit echt krassen Beispielen an
 - Weg über Penplotter in Generative Art
-- #plottertwitter
+- \#plottertwitter
 - Vera Molnar
 - Sol LeWitt
 - process

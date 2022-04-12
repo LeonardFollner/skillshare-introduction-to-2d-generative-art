@@ -28,5 +28,5 @@
 ## Todos
 - [ ] disable next step on click, when clicking on slide to navigate towards it
 - [x] scale all canvases
-- [ ] QR-Code Link to slides
+- [x] QR-Code Link to slides
 - [x] final task by Sol LeWitt

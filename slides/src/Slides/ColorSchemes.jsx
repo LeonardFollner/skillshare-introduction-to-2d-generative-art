@@ -1,6 +1,4 @@
 import React from "react";
-import PictureFrame from "../PictureFrame";
-import {replaceHelperFunctionComments} from "../helper";
 import analogous from "./images/1 analogous.png";
 import monochromatic from "./images/2 monochromatic.png";
 import triad from "./images/3 triad.png";

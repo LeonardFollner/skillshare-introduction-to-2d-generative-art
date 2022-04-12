@@ -1,5 +1,4 @@
 import React from "react";
-import {replaceHelperFunctionComments} from "../helper";
 import CanvasFrame from "../CanvasFrame";
 
 const Bugs = () => {
@@ -41,11 +40,6 @@ const Bugs = () => {
     };
 
     const circle = (context, canvasWidth, canvasHeight) => {
-        //${generatePointsOnCircle}
-        //${polarToCartesian}
-        //${drawCircle}
-        //${jitterCircle}
-
         const cx = canvasWidth / 2;
         const cy = canvasHeight / 2;
 
@@ -62,13 +56,9 @@ const Bugs = () => {
         circle,
     ];
 
-    const helperFunctions = {generatePointsOnCircle, drawCircle, jitterCircle};
-
-    const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
-
     return (
         <CanvasFrame
-            steps={stepsWithHelperFunctionsInlined}
+            steps={steps}
             title="Bugs"
         >
         </CanvasFrame>

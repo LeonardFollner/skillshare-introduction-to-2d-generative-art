@@ -1,5 +1,4 @@
 import React from "react";
-import {replaceHelperFunctionComments} from "../helper";
 import CanvasFrame from "../CanvasFrame";
 
 const JoyDivision = () => {
@@ -54,20 +53,12 @@ const JoyDivision = () => {
 
     // centered noise
     const step0 = (context, canvasWidth, canvasHeight) => {
-        //${generateLines}
-        //${drawCurves}
-        //${background}
-
         const lines = generateLines(canvasWidth, canvasHeight);
         drawCurves(context, canvasWidth, canvasHeight, lines, "black", "white");
     };
 
     // black background
     const step1 = (context, canvasWidth, canvasHeight) => {
-        //${generateLines}
-        //${drawCurves}
-        //${background}
-
         background(context, canvasWidth, canvasHeight, "black");
         const lines = generateLines(canvasWidth, canvasHeight);
         drawCurves(context, canvasWidth, canvasHeight, lines, "white", "black");
@@ -78,13 +69,9 @@ const JoyDivision = () => {
         step1,
     ];
 
-    const helperFunctions = {generateLines, background, drawCurves};
-
-    const stepsWithHelperFunctionsInlined = steps.map(step => replaceHelperFunctionComments(step, helperFunctions));
-
     return (
         <CanvasFrame
-            steps={stepsWithHelperFunctionsInlined}
+            steps={steps}
             title="Joy Division"
         >
         </CanvasFrame>
